@@ -6,6 +6,7 @@
 **Região:** South America (São Paulo)
 **Data:** 2026-02-22
 **Autor:** @data-engineer (Dara)
+**Versão:** 2.0 (RLS Configured)
 
 ---
 
@@ -14,10 +15,19 @@
 | Estado | Descrição |
 |--------|-----------|
 | **Provisionado** | ✅ Sim |
-| **Tabelas Criadas** | ❌ Não (schema vazio) |
-| **Migrations** | ❌ Nenhuma |
-| **RLS Policies** | ⚠️ Padrão (sem políticas customizadas) |
+| **Tabelas Criadas** | ❌ Não (próxima story) |
+| **Migrations** | ✅ 2 migrations aplicadas |
+| **RLS Policies** | ✅ Framework configurado |
 | **Functions** | ❌ Nenhuma |
+
+---
+
+## Migrations Aplicadas
+
+| ID | Arquivo | Descrição | Data |
+|----|---------|-----------|------|
+| 001 | `001_revoke_generic_grants.sql` | Revoga GRANT ALL genérico | 2026-02-22 |
+| 002 | `002_enable_rls.sql` | Configura framework RLS | 2026-02-22 |
 
 ---
 
@@ -25,77 +35,127 @@
 
 ### Schema: `public`
 
-O schema `public` está **vazio** - nenhuma tabela foi criada ainda.
+O schema `public` está **vazio** - tabelas serão criadas na STORY-1.2.
 
 ### Roles Configuradas
 
-| Role | Descrição | Permissões Padrão |
-|------|-----------|-------------------|
-| `postgres` | Superusuário | ALL |
+| Role | Descrição | Permissões Atuais |
+|------|-----------|---------------------|
+| `postgres` | Superusuário | ALL (completo) |
 | `anon` | Acesso anônimo (público) | USAGE on schema |
 | `authenticated` | Usuários autenticados | USAGE on schema |
-| `service_role` | Role de serviço (backend) | USAGE on schema |
+| `service_role` | Role de serviço (backend) | USAGE + ALL (admin) |
 
-### Grants Padrão
+### Security (DB-003: RESOLVIDO ✅)
 
+**Antes:**
 ```sql
--- Sequences
-GRANT ALL ON SEQUENCES TO postgres, anon, authenticated, service_role;
+-- ❌ RISCO: Permissões excessivas
+GRANT ALL ON TABLES TO anon;
+GRANT ALL ON TABLES TO authenticated;
+```
 
--- Functions
-GRANT ALL ON FUNCTIONS TO postgres, anon, authenticated, service_role;
+**Depois (Migration 001):**
+```sql
+-- ✅ SEGURO: Permissões mínimas
+REVOKE ALL ON ALL TABLES IN SCHEMA public FROM anon;
+REVOKE ALL ON ALL TABLES IN SCHEMA public FROM authenticated;
+GRANT USAGE ON SCHEMA public TO anon, authenticated, service_role;
+```
 
--- Tables
-GRANT ALL ON TABLES TO postgres, anon, authenticated, service_role;
+---
+
+## RLS Policies Framework
+
+As policies estão definidas na migration `002_enable_rls.sql` e serão aplicadas durante a criação das tabelas (STORY-1.2).
+
+### Padrão de Policies
+
+| Tipo | Descrição | Role |
+|------|-----------|------|
+| `*_select_authenticated` | Leitura para autenticados | `authenticated` |
+| `*_all_admin` | Escrita completa | `admin` (via JWT) |
+| `*_select_anon` | Leitura pública (se aplicável) | `anon` |
+| `*_select_self` | Leitura própria apenas | `authenticated` |
+
+### Policies por Tabela (serão aplicadas em STORY-1.2)
+
+#### clientes
+```sql
+ALTER TABLE clientes ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "clientes_select_authenticated" ON clientes
+  FOR SELECT TO authenticated USING (true);
+
+CREATE POLICY "clientes_all_admin" ON clientes
+  FOR ALL TO authenticated
+  USING (auth.jwt() ->> 'role' = 'admin')
+  WITH CHECK (auth.jwt() ->> 'role' = 'admin');
+```
+
+#### projetos
+```sql
+ALTER TABLE projetos ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "projetos_select_authenticated" ON projetos
+  FOR SELECT TO authenticated USING (true);
+
+CREATE POLICY "projetos_all_admin" ON projetos
+  FOR ALL TO authenticated
+  USING (auth.jwt() ->> 'role' = 'admin')
+  WITH CHECK (auth.jwt() ->> 'role' = 'admin');
+```
+
+#### conteudos
+```sql
+ALTER TABLE conteudos ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "conteudos_select_authenticated" ON conteudos
+  FOR SELECT TO authenticated USING (true);
+
+CREATE POLICY "conteudos_all_admin" ON conteudos
+  FOR ALL TO authenticated
+  USING (auth.jwt() ->> 'role' = 'admin')
+  WITH CHECK (auth.jwt() ->> 'role' = 'admin');
+```
+
+#### usuarios
+```sql
+ALTER TABLE usuarios ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "usuarios_select_self" ON usuarios
+  FOR SELECT TO authenticated
+  USING (auth.uid() = id);
+
+CREATE POLICY "usuarios_all_admin" ON usuarios
+  FOR ALL TO authenticated
+  USING (auth.jwt() ->> 'role' = 'admin')
+  WITH CHECK (auth.jwt() ->> 'role' = 'admin');
 ```
 
 ---
 
 ## Débitos Identificados (Database)
 
-| ID | Débito | Severidade | Esforço | Impacto |
-|----|--------|------------|---------|---------|
-| **DB-001** | Schema vazio - nenhuma tabela criada | Crítico | Alto | O sistema não persiste dados |
-| **DB-002** | Sem migrations versionadas | Alto | Médio | Impossível rastrear evolução |
-| **DB-003** | RLS policies genéricas (todas permissões) | Crítico | Alto | Risco de segurança |
-| **DB-004** | Sem índices (não há tabelas) | N/A | - | - |
-| **DB-005** | Sem constraints ou validations | N/A | - | - |
-
----
-
-## Recomendações
-
-### Imediatas (Crítico)
-
-1. **Criar estrutura de tabelas**
-   - Definir entidades principais (Clientes, Projetos, Conteúdos, etc.)
-   - Criar migrations versionadas
-
-2. **Configurar RLS Policies adequadas**
-   - Remover grants genéricos `GRANT ALL`
-   - Implementar políticas por role
-
-3. **Documentar modelo de dados**
-   - ERD (Entity Relationship Diagram)
-   - Dicionário de dados
-
-### Curto Prazo
-
-1. **Criar índices** para performance
-2. **Implementar triggers** para auditoria
-3. **Configurar backups** automatizados
+| ID | Débito | Severidade | Status |
+|----|--------|------------|--------|
+| **DB-001** | Schema vazio - nenhuma tabela criada | Crítico | Pendente |
+| **DB-002** | Sem migrations versionadas | Alto | ✅ RESOLVIDO |
+| **DB-003** | RLS policies genéricas | Crítico | ✅ RESOLVIDO |
+| **DB-006** | Configurar RLS policies específicas | Alto | Em progresso |
+| **DB-007** | Testar disaster recovery | Médio | Pendente |
+| **DB-008** | Documentar modelo ERD | Médio | Pendente |
 
 ---
 
 ## Próximos Passos
 
-1. **Definir modelo de dados** com @architect
-2. **Criar migrations** usando Supabase CLI
-3. **Implementar RLS** policies específicas
-4. **Documentar schema** em SCHEMA.md
+1. **STORY-1.2:** Criar tabelas com RLS habilitado
+2. **STORY-2.1:** Validar migrations e rollback
+3. **DB-008:** Criar ERD documentado
 
 ---
 
-*Fim da FASE 2 - Análise de Database*
+*SCHEMA.md v2.0 - RLS Framework Configurado*
 
 — Dara, arquiteta de dados 🗄️

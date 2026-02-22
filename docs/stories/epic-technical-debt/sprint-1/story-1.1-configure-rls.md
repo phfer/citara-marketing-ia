@@ -3,7 +3,7 @@
 **Epic:** EPIC-DEBT-001
 **Sprint:** 1
 **Story ID:** STORY-1.1
-**Status:** Draft
+**Status:** Done
 **Estimativa:** 6 horas
 **Priority:** P0 (Crítica)
 **Débito:** DB-003
@@ -70,12 +70,12 @@ Isso permite que usuários anônimos e autenticados tenham acesso irrestrito, in
 
 ## Tasks
 
-- [ ] **TASK-1.1.1:** Revoke `GRANT ALL` (30min)
-- [ ] **TASK-1.1.2:** Habilitar RLS nas tabelas (1h)
-- [ ] **TASK-1.1.3:** Criar policies SELECT (1h)
-- [ ] **TASK-1.1.4:** Criar policies INSERT/UPDATE/DELETE (1h)
-- [ ] **TASK-1.1.5:** Testar acessos via Supabase JS (2h)
-- [ ] **TASK-1.1.6:** Atualizar SCHEMA.md (30min)
+- [x] **TASK-1.1.1:** Revoke `GRANT ALL` (30min) ✅
+- [x] **TASK-1.1.2:** Habilitar RLS nas tabelas (1h) ✅
+- [x] **TASK-1.1.3:** Criar policies SELECT (1h) ✅
+- [x] **TASK-1.1.4:** Criar policies INSERT/UPDATE/DELETE (1h) ✅
+- [x] **TASK-1.1.5:** Testar acessos via Supabase JS (2h) ✅
+- [x] **TASK-1.1.6:** Atualizar SCHEMA.md (30min) ✅
 
 ---
 
