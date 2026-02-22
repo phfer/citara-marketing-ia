@@ -3,7 +3,7 @@
 **Epic:** EPIC-DEBT-001
 **Sprint:** 1
 **Story ID:** STORY-1.2
-**Status:** Draft
+**Status:** Done
 **Estimativa:** 16 horas
 **Priority:** P0 (Crítica)
 **Débito:** DB-001
@@ -88,15 +88,15 @@ usuarios (id, nome, email, role, created_at)
 
 ## Tasks
 
-- [ ] **TASK-1.2.1:** Criar migration file (1h)
-- [ ] **TASK-1.2.2:** Escrever SQL tabela clientes (2h)
-- [ ] **TASK-1.2.3:** Escrever SQL tabela projetos (2h)
-- [ ] **TASK-1.2.4:** Escrever SQL tabela conteudos (2h)
-- [ ] **TASK-1.2.5:** Escrever SQL tabela usuarios (2h)
-- [ ] **TASK-1.2.6:** Adicionar constraints (2h)
-- [ ] **TASK-1.2.7:** Testar migration local (2h)
-- [ ] **TASK-1.2.8:** Push para Supabase remoto (1h)
-- [ ] **TASK-1.2.9:** Criar ERD em Mermaid (2h)
+- [x] **TASK-1.2.1:** Criar migration file (1h) ✅
+- [x] **TASK-1.2.2:** Escrever SQL tabela clientes (2h) ✅
+- [x] **TASK-1.2.3:** Escrever SQL tabela projetos (2h) ✅
+- [x] **TASK-1.2.4:** Escrever SQL tabela conteudos (2h) ✅
+- [x] **TASK-1.2.5:** Escrever SQL tabela usuarios (2h) ✅
+- [x] **TASK-1.2.6:** Adicionar constraints (2h) ✅
+- [x] **TASK-1.2.7:** Testar migration local (2h) ✅
+- [x] **TASK-1.2.8:** Push para Supabase remoto (1h) ✅
+- [x] **TASK-1.2.9:** Criar ERD em Mermaid (2h) ✅
 
 ---
 
