@@ -1,0 +1,52 @@
+# AIOS Environment Report
+generated_at: 2026-02-22T16:35:00
+project_name: citara-marketing-ia
+
+system:
+  os: Darwin
+  architecture: arm64
+  user: paulohenrique
+  hostname: MacBook-Pro-de-Paulo.local
+
+cli_tools:
+  git:
+    installed: true
+    version: "2.50.1"
+  gh:
+    installed: true
+    version: "2.86.0"
+    authenticated: true
+    account: phfer
+  node:
+    installed: true
+    version: "24.13.0"
+  npm:
+    installed: true
+    version: "11.6.2"
+  pnpm:
+    installed: true
+    version: "10.28.2"
+  docker:
+    installed: true
+    version: "28.5.1"
+    running: true
+  supabase:
+    installed: true
+    version: "2.75.0"
+  railway:
+    installed: true
+    version: "4.30.3"
+  coderabbit:
+    installed: false
+    note: "Install URL changed - check https://docs.coderabbit.ai"
+
+repository:
+  initialized: true
+  remote_url: https://github.com/phfer/citara-marketing-ia.git
+  branch: main
+  commits: 2
+
+validation:
+  essential_complete: true
+  recommended_complete: true
+  ready_for_development: true
