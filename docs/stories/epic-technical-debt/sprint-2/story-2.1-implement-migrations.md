@@ -3,7 +3,7 @@
 **Epic:** EPIC-DEBT-001
 **Sprint:** 2
 **Story ID:** STORY-2.1
-**Status:** Draft
+**Status:** Done
 **Estimativa:** 4 horas
 **Priority:** P1 (Alta)
 **Débito:** DB-002
@@ -49,11 +49,11 @@ supabase db reset --local
 
 ## Tasks
 
-- [ ] **TASK-2.1.1:** Criar estrutura de docs (30min)
-- [ ] **TASK-2.1.2:** Versionar migrations existentes (1h)
-- [ ] **TASK-2.1.3:** Testar rollback local (1h)
-- [ ] **TASK-2.1.4:** Documentar convenções (1h)
-- [ ] **TASK-2.1.5:** Documentar comandos (30min)
+- [x] **TASK-2.1.1:** Criar estrutura de docs (30min) ✅
+- [x] **TASK-2.1.2:** Versionar migrations existentes (1h) ✅
+- [x] **TASK-2.1.3:** Testar rollback local (1h) ✅
+- [x] **TASK-2.1.4:** Documentar convenções (1h) ✅
+- [x] **TASK-2.1.5:** Documentar comandos (30min) ✅
 
 ---
 
