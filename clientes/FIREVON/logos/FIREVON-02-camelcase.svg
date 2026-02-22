@@ -1,0 +1,10 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;display=swap');
+    </style>
+  </defs>
+  <text x="200" y="75" text-anchor="middle" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="56px">
+    <tspan font-weight="700" fill="#FF6B35">Fire</tspan><tspan font-weight="400" fill="#1A1F36">Von</tspan>
+  </text>
+</svg>

@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforma Tributária 2026 | EMASFI Group - Sua Empresa Está Preparada?</title>
+    <meta name="description" content="A Maior Reforma Fiscal da História do Brasil. Descubra o impacto da EC 132/2023 no seu negócio e como se preparar com a EMASFI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* CORES OFICIAIS EMASFI */
+            --emasfi-orange: #F26C28;
+            --emasfi-orange-dark: #D45A1E;
+            --emasfi-blue: #060940;
+            --emasfi-blue-light: #0A0E5C;
+            --emasfi-white: #FFFFFF;
+            --emasfi-gray: #F5F5F5;
+            --emasfi-gray-dark: #E0E0E0;
+            --emasfi-text: #1A1A1A;
+            --emasfi-text-light: #666666;
+            --emasfi-accent-green: #27AE60;
+            --emasfi-accent-red: #E74C3C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--emasfi-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+            background: var(--emasfi-white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--emasfi-blue);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container-wide {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HEADER */
+        .header {
+            background: var(--emasfi-white);
+            box-shadow: 0 2px 20px rgba(6, 9, 64, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 4px 30px rgba(6, 9, 64, 0.12);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--emasfi-blue);
+            letter-spacing: -1px;
+            text-decoration: none;
+        }
+
+        .logo-text span {
+            color: var(--emasfi-orange);
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .header-nav a {
+            color: var(--emasfi-text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .header-nav a:hover {
+            color: var(--emasfi-orange);
+        }
+
+        .header-cta {
+            background: var(--emasfi-orange);
+            color: var(--emasfi-white);
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .header-cta:hover {
+            background: var(--emasfi-orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(242, 108, 40, 0.35);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(242, 108, 40, 0.1) 100%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(242, 108, 40, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--emasfi-orange);
+            color: var(--emasfi-white);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            font-weight: 900;
+            color: var(--emasfi-white);
+            line-height: 1.2;
+            text-align: center;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-break {
+            display: inline;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-bottom: 50px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--emasfi-orange);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 42px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-primary {
+            background: var(--emasfi-orange);
+            color: var(--emasfi-white);
+        }
+
+        .btn-primary:hover {
+            background: var(--emasfi-orange-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(242, 108, 40, 0.35);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--emasfi-white);
+            border: 2px solid var(--emasfi-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--emasfi-white);
+            color: var(--emasfi-blue);
+        }
+
+        .btn-large {
+            padding: 20px 48px;
+            font-size: 17px;
+        }
+
+        /* COUNTDOWN */
+        .countdown-section {
+            background: var(--emasfi-blue);
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .countdown-content {
+            text-align: center;
+            color: var(--emasfi-white);
+        }
+
+        .countdown-title {
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .countdown-title span {
+            color: var(--emasfi-orange);
+            font-weight: 700;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .countdown-item {
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--emasfi-orange);
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 12px;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 8px;
+        }
+
+        /* SECTIONS GENERAL */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-gray {
+            background: var(--emasfi-gray);
+        }
+
+        .section-blue {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: var(--emasfi-blue);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-blue .section-title h2 {
+            color: var(--emasfi-white);
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: var(--emasfi-text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        .section-blue .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* WHAT IS REFORM */
+        .what-is-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .what-is-card {
+            background: var(--emasfi-white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 30px rgba(6, 9, 64, 0.08);
+            border-left: 4px solid var(--emasfi-orange);
+            transition: all 0.3s;
+        }
+
+        .what-is-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(6, 9, 64, 0.12);
+        }
+
+        .what-is-card h3 {
+            font-size: 22px;
+            color: var(--emasfi-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .what-is-card p {
+            color: var(--emasfi-text-light);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--emasfi-orange) 0%, var(--emasfi-blue) 100%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-content {
+            background: var(--emasfi-white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 25px rgba(6, 9, 64, 0.08);
+            max-width: 380px;
+            margin: 0 40px;
+            border-left: 3px solid var(--emasfi-orange);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin: 40px 0 0 40px;
+            border-left: none;
+            border-right: 3px solid var(--emasfi-orange);
+        }
+
+        .timeline-date {
+            display: inline-block;
+            background: var(--emasfi-orange);
+            color: var(--emasfi-white);
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-content h4 {
+            font-size: 18px;
+            color: var(--emasfi-blue);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .timeline-content p {
+            font-size: 14px;
+            color: var(--emasfi-text-light);
+            line-height: 1.6;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--emasfi-white);
+            border: 4px solid var(--emasfi-orange);
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(242, 108, 40, 0.2);
+        }
+
+        /* NEW TAXES */
+        .taxes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .tax-card {
+            background: var(--emasfi-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(6, 9, 64, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tax-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(6, 9, 64, 0.15);
+        }
+
+        .tax-card-header {
+            color: var(--emasfi-white);
+            padding: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        .tax-card-header.ibs {
+            background: linear-gradient(135deg, var(--emasfi-blue) 0%, var(--emasfi-blue-light) 100%);
+        }
+
+        .tax-card-header.cbs {
+            background: linear-gradient(135deg, var(--emasfi-orange) 0%, #FF8A50 100%);
+        }
+
+        .tax-card-header.is {
+            background: linear-gradient(135deg, var(--emasfi-accent-red) 0%, #C0392B 100%);
+        }
+
+        .tax-acronym {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .tax-name {
+            font-size: 14px;
+            opacity: 0.95;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        .tax-card-body {
+            padding: 30px;
+        }
+
+        .tax-card-body h4 {
+            color: var(--emasfi-blue);
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .tax-card-body ul {
+            list-style: none;
+        }
+
+        .tax-card-body li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--emasfi-gray-dark);
+            font-size: 14px;
+            color: var(--emasfi-text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tax-card-body li:last-child {
+            border-bottom: none;
+        }
+
+        .tax-card-body li::before {
+            content: '✓';
+            color: var(--emasfi-orange);
+            font-weight: 700;
+        }
+
+        /* COMPARISON TABLE */
+        .comparison-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(6, 9, 64, 0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--emasfi-white);
+        }
+
+        .comparison-table th {
+            padding: 20px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .comparison-table th:first-child {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+            border-radius: 12px 0 0 0;
+        }
+
+        .comparison-table th.old {
+            background: var(--emasfi-accent-red);
+            color: var(--emasfi-white);
+        }
+
+        .comparison-table th.new {
+            background: var(--emasfi-accent-green);
+            color: var(--emasfi-white);
+            border-radius: 0 12px 0 0;
+        }
+
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--emasfi-gray-dark);
+            font-size: 14px;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: var(--emasfi-gray);
+        }
+
+        /* SECTOR IMPACTS */
+        .sectors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .sector-card {
+            background: var(--emasfi-white);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(6, 9, 64, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(6, 9, 64, 0.12);
+        }
+
+        .sector-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .sector-card.high-impact::before {
+            background: var(--emasfi-accent-red);
+        }
+
+        .sector-card.medium-impact::before {
+            background: var(--emasfi-orange);
+        }
+
+        .sector-card.low-impact::before {
+            background: var(--emasfi-accent-green);
+        }
+
+        .sector-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .sector-card h4 {
+            color: var(--emasfi-blue);
+            margin-bottom: 10px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .sector-impact {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sector-impact.high {
+            background: rgba(231, 76, 60, 0.1);
+            color: var(--emasfi-accent-red);
+        }
+
+        .sector-impact.medium {
+            background: rgba(242, 108, 40, 0.15);
+            color: var(--emasfi-orange);
+        }
+
+        .sector-impact.low {
+            background: rgba(39, 174, 96, 0.1);
+            color: var(--emasfi-accent-green);
+        }
+
+        .sector-card p {
+            font-size: 14px;
+            color: var(--emasfi-text-light);
+            line-height: 1.7;
+        }
+
+        /* RISKS & OPPORTUNITIES */
+        .risks-opportunities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+        }
+
+        .ro-column h3 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .risks h3 {
+            color: var(--emasfi-accent-red);
+        }
+
+        .opportunities h3 {
+            color: var(--emasfi-accent-green);
+        }
+
+        .ro-list {
+            list-style: none;
+        }
+
+        .ro-item {
+            background: var(--emasfi-white);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 20px rgba(6, 9, 64, 0.06);
+            display: flex;
+            gap: 15px;
+            transition: all 0.3s;
+        }
+
+        .ro-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 30px rgba(6, 9, 64, 0.1);
+        }
+
+        .ro-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .ro-content h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .risks .ro-content h4 {
+            color: var(--emasfi-accent-red);
+        }
+
+        .opportunities .ro-content h4 {
+            color: var(--emasfi-accent-green);
+        }
+
+        .ro-content p {
+            font-size: 14px;
+            color: var(--emasfi-text-light);
+            line-height: 1.6;
+        }
+
+        /* SOLUTIONS CTA */
+        .solutions-section {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solutions-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(242, 108, 40, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .solutions-section .section-title h2 {
+            color: var(--emasfi-white);
+        }
+
+        .solutions-section .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* SOCIAL PROOF */
+        .social-proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .proof-item {
+            padding: 25px;
+        }
+
+        .proof-number {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--emasfi-orange);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .proof-label {
+            font-size: 15px;
+            color: var(--emasfi-blue);
+            font-weight: 600;
+        }
+
+        .testimonial-card {
+            background: var(--emasfi-white);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(6, 9, 64, 0.08);
+            margin-top: 40px;
+            position: relative;
+            border-left: 4px solid var(--emasfi-orange);
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--emasfi-text);
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            text-align: center;
+            color: var(--emasfi-text-light);
+        }
+
+        .testimonial-author strong {
+            color: var(--emasfi-blue);
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: 10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(242, 108, 40, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 44px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            color: var(--emasfi-white);
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* FORM */
+        .form-section {
+            padding: 100px 0;
+            background: var(--emasfi-gray);
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--emasfi-white);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 15px 50px rgba(6, 9, 64, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--emasfi-blue);
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--emasfi-gray-dark);
+            border-radius: 6px;
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--emasfi-orange);
+            box-shadow: 0 0 0 4px rgba(242, 108, 40, 0.1);
+        }
+
+        .form-submit {
+            width: 100%;
+            background: var(--emasfi-orange);
+            color: var(--emasfi-white);
+            padding: 18px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .form-submit:hover {
+            background: var(--emasfi-orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(242, 108, 40, 0.3);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--emasfi-blue);
+            color: var(--emasfi-white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .footer-logo span {
+            color: var(--emasfi-orange);
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .footer h4 {
+            margin-bottom: 20px;
+            color: var(--emasfi-orange);
+            font-size: 16px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer li {
+            padding: 8px 0;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .footer a:hover {
+            color: var(--emasfi-orange);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 42px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .risks-opportunities {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+
+            .hero {
+                padding: 140px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                line-height: 1.3;
+                max-width: 100%;
+                padding: 0 15px;
+            }
+
+            .hero-break {
+                display: block;
+                margin-top: 10px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 25px;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .countdown-timer {
+                gap: 20px;
+            }
+
+            .countdown-number {
+                font-size: 32px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                padding-left: 50px;
+                padding-right: 0;
+                justify-content: flex-start;
+            }
+
+            .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin: 0;
+            }
+
+            .timeline-dot {
+                left: 20px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .form-wrapper {
+                padding: 35px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="#" class="logo">
+                <img src="https://mail.emasfi.com.br/wp-content/uploads/2023/09/LOGO-EG-EMASFI-G-TRANSP-4.png" alt="EMASFI Group" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span class="logo-text" style="display:none;">EMASFI<span>GROUP</span></span>
+            </a>
+            <div class="header-nav">
+                <a href="#o-que-e">O Que É</a>
+                <a href="#novos-impostos">Novos Impostos</a>
+                <a href="#impacto-setorial">Impacto</a>
+                <a href="#contato">Contato</a>
+            </div>
+            <a href="#contato" class="header-cta">Fale Conosco</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="hero-badge">Guia Definitivo 2026</span>
+            <h1>A Maior Reforma Fiscal da História do Brasil Está Aqui. <span class="hero-break">Sua Empresa Está Preparada?</span></h1>
+            <p class="hero-subtitle">A EC 132/2023 vai impactar todos os setores da economia. Entenda as mudanças, os riscos e as oportunidades para sua empresa.</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">impostos substituídos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2033</div>
+                    <div class="stat-label">transição completa</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">R$ 70bi</div>
+                    <div class="stat-label">impacto estimado</div>
+                </div>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#contato" class="btn btn-primary btn-large">Análise Gratuita da Minha Empresa</a>
+                <a href="#o-que-e" class="btn btn-secondary btn-large">Entender a Reforma</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section">
+        <div class="container countdown-content">
+            <p class="countdown-title">Início da vigência do IBS e CBS em: <span>JANEIRO 2026</span></p>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">--</div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">--</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">--</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT IS REFORM -->
+    <section class="section" id="o-que-e">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que é a Reforma Tributária?</h2>
+                <p>A Emenda Constitucional 132/2023 representa a maior mudança no sistema tributário brasileiro em décadas.</p>
+            </div>
+
+            <div class="what-is-grid">
+                <div class="what-is-card">
+                    <h3>Histórico</h3>
+                    <p>Aprovada em dezembro de 2023 após mais de 30 anos de debates, a reforma unifica 5 impostos em 2, simplificando um dos sistemas mais complexos do mundo.</p>
+                </div>
+                <div class="what-is-card">
+                    <h3>Impacto</h3>
+                    <p>Impacta todos os setores da economia, com mudanças na cadeia de tributação, alíquotas e regimes especiais. O período de transição vai até 2033.</p>
+                </div>
+                <div class="what-is-card">
+                    <h3>Objetivo</h3>
+                    <p>Simplificar o sistema, reduzir a cumulatividade, aumentar a competitividade das empresas brasileiras e promover justiça fiscal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Linha do Tempo da Transição</h2>
+                <p>Conheça o cronograma completo de implementação até 2033.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">DEZ 2023</span>
+                        <h4>Promulgação da EC 132/2023</h4>
+                        <p>Congresso Nacional aprova a Reforma Tributária. Marco histórico do novo sistema.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024-2025</span>
+                        <h4>Período de Regulamentação</h4>
+                        <p>Leis complementares definindo alíquotas, regras de transição e comitê gestor.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">JAN 2026</span>
+                        <h4>Início da Vigência</h4>
+                        <p>IBS e CBS começam a ser cobrados. Início do período de transição.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026-2029</span>
+                        <h4>Fase de Transição Inicial</h4>
+                        <p>Convênio de 80/20, redução gradual de alíquotas e créditos presumidos.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2029-2033</span>
+                        <h4>Consolidação do Sistema</h4>
+                        <p>Ajustes finais, extinção completa de impostos antigos e plena vigência do novo sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW TAXES -->
+    <section class="section" id="novos-impostos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Os Novos Impostos</h2>
+                <p>Conheça o IBS, CBS e Imposto Seletivo que substituirão PIS/COFINS, ICMS e ISS.</p>
+            </div>
+
+            <div class="taxes-grid">
+                <div class="tax-card">
+                    <div class="tax-card-header ibs">
+                        <div class="tax-acronym">IBS</div>
+                        <div class="tax-name">Imposto sobre Bens e Serviços</div>
+                    </div>
+                    <div class="tax-card-body">
+                        <h4>Substitui:</h4>
+                        <ul>
+                            <li>ICMS (Estadual)</li>
+                            <li>ISS (Municipal)</li>
+                        </ul>
+                        <h4 style="margin-top: 15px;">Características:</h4>
+                        <ul>
+                            <li>Vigência: Janeiro 2026</li>
+                            <li>Alíquota referencial: 26,5%</li>
+                            <li>Não cumulativo</li>
+                            <li>Lei complementar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tax-card">
+                    <div class="tax-card-header cbs">
+                        <div class="tax-acronym">CBS</div>
+                        <div class="tax-name">Contribuição sobre Bens e Serviços</div>
+                    </div>
+                    <div class="tax-card-body">
+                        <h4>Substitui:</h4>
+                        <ul>
+                            <li>PIS (Federal)</li>
+                            <li>COFINS (Federal)</li>
+                        </ul>
+                        <h4 style="margin-top: 15px;">Características:</h4>
+                        <ul>
+                            <li>Vigência: Janeiro 2026</li>
+                            <li>Alíquota referencial: 8,8%</li>
+                            <li>Administração Federal</li>
+                            <li>Crédito pleno</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tax-card">
+                    <div class="tax-card-header is">
+                        <div class="tax-acronym">IS</div>
+                        <div class="tax-name">Imposto Seletivo</div>
+                    </div>
+                    <div class="tax-card-body">
+                        <h4>Incide sobre:</h4>
+                        <ul>
+                            <li>Produtos nocivos à saúde</li>
+                            <li>Produtos poluentes</li>
+                        </ul>
+                        <h4 style="margin-top: 15px;">Características:</h4>
+                        <ul>
+                            <li>Extrafiscalidade</li>
+                            <li>Alíquotas majoradas</li>
+                            <li>Objetivo: desestimular consumo</li>
+                            <li>Vigência: 2026</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sistema Atual vs. Novo Sistema</h2>
+                <p>Comparativo das principais mudanças tributárias.</p>
+            </div>
+
+            <div class="comparison-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th class="old">Sistema Atual</th>
+                            <th class="new">Novo Sistema</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Impostos no Consumo</strong></td>
+                            <td>5 (PIS, COFINS, ICMS, ISS, IPI)</td>
+                            <td>2 (IBS, CBS) + IS</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cumulatividade</strong></td>
+                            <td>Parcial (ICMS, PIS/COFINS não cumulativos limitados)</td>
+                            <td>Não cumulativo pleno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Base de Cálculo</strong></td>
+                            <td>Diversas (faturamento, valor agregado, etc.)</td>
+                            <td>Valor adicionado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Guerra Fiscal</strong></td>
+                            <td>Intensa (benefícios estaduais/municipais)</td>
+                            <td>Proibida (sem incentivos fiscais)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alíquotas</strong></td>
+                            <td>Variadas por estado/município</td>
+                            <td>Nacionais uniformes (com exceções)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Administração</strong></td>
+                            <td>Federal, Estadual e Municipal</td>
+                            <td>Comitê Gestor (IBS) e Federal (CBS)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTOR IMPACTS -->
+    <section class="section" id="impacto-setorial">
+        <div class="container">
+            <div class="section-title">
+                <h2>Impacto por Setor</h2>
+                <p>Como cada setor da economia será afetado pela reforma.</p>
+            </div>
+
+            <div class="sectors-grid">
+                <div class="sector-card high-impact">
+                    <div class="sector-icon">🏭</div>
+                    <h4>Indústria</h4>
+                    <span class="sector-impact high">ALTO IMPACTO</span>
+                    <p>Setores com cadeias longas sofreram mais com cumulatividade. Benefício com não cumulatividade plena.</p>
+                </div>
+
+                <div class="sector-card high-impact">
+                    <div class="sector-icon">🛒</div>
+                    <h4>Varejo</h4>
+                    <span class="sector-impact high">ALTO IMPACTO</span>
+                    <p>Alteração no fluxo de créditos. Produtos essenciais com alíquota reduzida.</p>
+                </div>
+
+                <div class="sector-card medium-impact">
+                    <div class="sector-icon">🚚</div>
+                    <h4>Logística</h4>
+                    <span class="sector-impact medium">MÉDIO IMPACTO</span>
+                    <p>Mudança no tratamento de frete. Nova regra de origem (destino).</p>
+                </div>
+
+                <div class="sector-card medium-impact">
+                    <div class="sector-icon">💻</div>
+                    <h4>Tecnologia</h4>
+                    <span class="sector-impact medium">MÉDIO IMPACTO</span>
+                    <p>Software e serviços digitais especificidade na CBS. Potencial redução de carga.</p>
+                </div>
+
+                <div class="sector-card low-impact">
+                    <div class="sector-icon">🏥</div>
+                    <h4>Saúde</h4>
+                    <span class="sector-impact low">BAIXO IMPACTO</span>
+                    <p>Alíquota reduzida para serviços de saúde. Medicamentos com alíquota favorecida.</p>
+                </div>
+
+                <div class="sector-card medium-impact">
+                    <div class="sector-icon">🏗️</div>
+                    <h4>Construção Civil</h4>
+                    <span class="sector-impact medium">MÉDIO IMPACTO</span>
+                    <p>Moradia popular com alíquota reduzida. Mudança no crédito de materiais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RISKS & OPPORTUNITIES -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Riscos e Oportunidades</h2>
+                <p>O que sua empresa precisa atentar e o que pode aproveitar.</p>
+            </div>
+
+            <div class="risks-opportunities">
+                <div class="ro-column risks">
+                    <h3>⚠️ Riscos Críticos</h3>
+                    <ul class="ro-list">
+                        <li class="ro-item">
+                            <div class="ro-icon">🔴</div>
+                            <div class="ro-content">
+                                <h4>Perda de Créditos na Transição</h4>
+                                <p>Créditos de ICMS e PIS/COFINS podem não ser totalmente aproveitados no novo sistema.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🔴</div>
+                            <div class="ro-content">
+                                <h4>Aumento de Carga Tributária</h4>
+                                <p>Setores que usufruíram benefícios fiscais podem ter aumento de carga efetiva.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🔴</div>
+                            <div class="ro-content">
+                                <h4>Complexidade na Transição</h4>
+                                <p>Período de 2026-2033 com regras híbridas exige planejamento detalhado.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🔴</div>
+                            <div class="ro-content">
+                                <h4>Mudança na Precificação</h4>
+                                <p>Nova estrutura de custos pode exigir revisão de preços e margens.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🔴</div>
+                            <div class="ro-content">
+                                <h4>Impacto no Fluxo de Caixa</h4>
+                                <p>Mudança no momento de pagamento e creditamento pode afetar capital de giro.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="ro-column opportunities">
+                    <h3>✅ Oportunidades Estratégicas</h3>
+                    <ul class="ro-list">
+                        <li class="ro-item">
+                            <div class="ro-icon">🟢</div>
+                            <div class="ro-content">
+                                <h4>Redução da Carga Tributária</h4>
+                                <p>Não cumulatividade plena pode reduzir a carga efetiva para setores com cadeias longas.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🟢</div>
+                            <div class="ro-content">
+                                <h4>Simplificação da Compliance</h4>
+                                <p>Menos impostos, menos declarações, menos guias, menos complexidade operacional.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🟢</div>
+                            <div class="ro-content">
+                                <h4>Maior Competitividade</h4>
+                                <p>Redução do custo Brasil e fim da guerra fiscal nivelam a competição.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🟢</div>
+                            <div class="ro-content">
+                                <h4>Planejamento Tributário Novo</h4>
+                                <p>Nova regra do jogo permite repensar estrutura operacional e supply chain.</p>
+                            </div>
+                        </li>
+                        <li class="ro-item">
+                            <div class="ro-icon">🟢</div>
+                            <div class="ro-content">
+                                <h4>Recuperação de Créditos</h4>
+                                <p>Oportunidade de revisar créditos passados e não aproveitados antes da transição.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS CTA -->
+    <section class="section solutions-section" id="solucoes">
+        <div class="container">
+            <div class="section-title">
+                <h2>A EMASFI Está Preparada para a Reforma Tributária</h2>
+                <p>Nossa equipe de especialistas está pronta para ajudar sua empresa a navegar essa transição.</p>
+            </div>
+            <div style="text-align: center; position: relative; z-index: 1;">
+                <a href="#contato" class="btn btn-primary btn-large">Fale com um Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="section section-gray">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por Que Escolher a EMASFI</h2>
+                <p>Mais de 25 anos de experiência em tributação e consultoria empresarial.</p>
+            </div>
+
+            <div class="social-proof-grid">
+                <div class="proof-item">
+                    <div class="proof-number">+25</div>
+                    <div class="proof-label">Anos de Experiência</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">+50</div>
+                    <div class="proof-label">Países de Atuação</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">+500</div>
+                    <div class="proof-label">Empresas Atendidas</div>
+                </div>
+                <div class="proof-item">
+                    <div class="proof-number">R$ 1Bi+</div>
+                    <div class="proof-label">Recuperado para Clientes</div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"A EMASFI transformou nossa abordagem tributária. Com a Reforma Tributária, a equipe nos guiou por todo o processo de transição, identificando oportunidades de economia e mitigando riscos. Parceiro indispensável."</p>
+                <p class="testimonial-author"><strong>CFO</strong> - Indústria de Transformação</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Não Deixe para Depois</h2>
+            <p>A transição começa em 2026. Empresas que se preparam agora terão vantagem competitiva. Agende seu diagnóstico gratuito.</p>
+            <div class="cta-buttons">
+                <a href="#contato" class="btn btn-primary btn-large">Agendar Diagnóstico Gratuito</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="form-section" id="contato">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="section-title">
+                    <h2>Agende Seu Diagnóstico</h2>
+                    <p>Preencha o formulário e nossa equipe entrará em contato em até 24 horas úteis.</p>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa *</label>
+                        <input type="text" id="empresa" name="empresa" required placeholder="Nome da sua empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo *</label>
+                        <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensagem">Como podemos ajudar? *</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Conte-nos brevemente sobre suas necessidades..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Solicitar Contato</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">EMASFI<span>GROUP</span></div>
+                    <p>Soluções integradas em gestão, tributação e consultoria para o crescimento do seu negócio.</p>
+                    <p>Mais de 25 anos de excelência em consultoria tributária e BPO fiscal.</p>
+                </div>
+
+                <div>
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#">BPO Fiscal</a></li>
+                        <li><a href="#">Consultoria Tributária</a></li>
+                        <li><a href="#">Recuperação Tributária</a></li>
+                        <li><a href="#">Auditoria</a></li>
+                        <li><a href="#">Compliance</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📧 contato@emasfi.com.br</li>
+                        <li>📞 +55 (11) 2737-8692</li>
+                        <li>📍 São Paulo/SP</li>
+                        <li>📍 Vinhedo/SP</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Redes Sociais</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/emasfioficial" target="_blank">📸 @emasfioficial</a></li>
+                        <li><a href="https://www.linkedin.com/company/emasfi-group" target="_blank">💼 EMASFI Group</a></li>
+                        <li><a href="https://www.emasfi.com.br" target="_blank">🌐 www.emasfi.com.br</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 EMASFI Group. Todos os direitos reservados. | Reforma Tributária EC 132/2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Countdown to January 1, 2026
+        function updateCountdown() {
+            const targetDate = new Date('January 1, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000);
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Obrigado pelo interesse! Nossa equipe entrará em contato em até 24 horas úteis.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+{
+  "titulo_documento": "FIREVON Briefing de Marca e Plano de Ação",
+  "data_documento": "30/01/2026",
+  "resumo_executivo": {
+    "texto": "A Firevon é uma consultoria/implementadora que instala um sistema integrado de crescimento previsível, conectando demanda (Marketing), conversão (Comercial) e rotina de execução (Gestão). Este documento organiza o posicionamento, a oferta e um plano de implementação em fases, para transformar a marca em uma operação comercialmente vendável e operacionalmente escalável.",
+    "trecho_original": "A Firevon é uma consultoria/implementadora que instala um sistema integrado de crescimento\nprevisível, conectando demanda (Marketing), conversão (Comercial) e rotina de execução\n(Gestão).\nEste documento organiza o posicionamento, a oferta e um plano de implementação em fases,\npara transformar a marca em uma operação comercialmente vendável e operacionalmente\nescalável."
+  },
+  "posicionamento": {
+    "categoria": "Consultoria + implementação de Sistema de Receita e Performance Operacional (demanda, vendas e gestão por indicadores).",
+    "frase": "Para PMEs que querem crescer com previsibilidade, a Firevon implanta um sistema integrado de Marketing, Comercial e Gestão para transformar estratégia em execução e resultados mensuráveis.",
+    "proposta_de_valor": "Implantamos um sistema integrado de demanda, vendas e gestão com indicadores - para sua empresa crescer com previsibilidade.",
+    "promessa": "Menos achismo. Mais processo. Mais conversão. Mais previsibilidade.",
+    "diferenciais": [
+      "Integração real: demanda, vendas e gestão no mesmo sistema (não apenas \"marketing\" ou \"treinamento\").",
+      "Implementação + governança: rotina, rituais e indicadores para garantir execução contínua.",
+      "Método replicável: framework proprietário, playbooks e padrão de entrega."
+    ],
+    "trecho_original": "Categoria\nConsultoria + implementação de Sistema de Receita e Performance Operacional (demanda,\nvendas e gestão por indicadores).\nPosicionamento (clareza em uma frase)\nPara PMEs que querem crescer com previsibilidade, a Firevon implanta um sistema integrado de\nMarketing, Comercial e Gestão para transformar estratégia em execução e resultados\nmensuráveis.\nProposta de valor (refinada)\nImplantamos um sistema integrado de demanda, vendas e gestão com indicadores - para sua\nempresa crescer com previsibilidade.\nPromessa\nMenos achismo. Mais processo. Mais conversão. Mais previsibilidade.\nDiferencial (o que separa do genérico)\n Integração real: demanda, vendas e gestão no mesmo sistema (não apenas \"marketing\" ou\n\"treinamento\").\n Implementação + governança: rotina, rituais e indicadores para garantir execução contínua.\n Método replicável: framework proprietário, playbooks e padrão de entrega."
+  },
+  "icp": {
+    "primario": [
+      "Negócio com ticket médio de médio a alto e venda consultiva.",
+      "Time comercial (ao menos 1 closer) ou fundador vendendo com rotina.",
+      "Oferta validada, mas crescimento travado por falta de previsibilidade.",
+      "Dor dominante: pipeline inconsistente, baixa conversão e gestão sem indicadores."
+    ],
+    "secundario": [
+      "Empresas que já investem em marketing, mas têm vazamento no comercial.",
+      "Empresas em fase de crescimento acelerado, com processos e gestão frágeis."
+    ],
+    "anti_icp": [
+      "Quem quer apenas \"posts\" ou ações isoladas sem processo.",
+      "Quem não tem disposição para executar rotina (rituais, acompanhamento, métricas).",
+      "Negócios sem oferta clara ou sem caixa mínimo para sustentar implementação."
+    ],
+    "dores_como_cliente_fala": [
+      "\"Meu comercial depende de sorte.\"",
+      "\"Tem lead, mas não vira venda.\"",
+      "\"O time não segue um processo.\"",
+      "\"Eu não tenho números confiáveis para decidir.\"",
+      "\"Tudo fica na minha cabeça.\""
+    ],
+    "resultados_prometidos": [
+      "Pipeline previsível e qualificado.",
+      "Taxa de conversão maior (com processo e cadência).",
+      "Rotina de gestão que sustenta o crescimento sem heróis.",
+      "Indicadores claros para tomada de decisão e priorização."
+    ],
+    "trecho_original": "O problema que resolvemos (como o cliente fala)\n \"Meu comercial depende de sorte.\"\n \"Tem lead, mas não vira venda.\"\n \"O time não segue um processo.\"\n \"Eu não tenho números confiáveis para decidir.\"\n \"Tudo fica na minha cabeça.\"\nO resultado que entregamos (resultado, não tarefa)\n Pipeline previsível e qualificado.\n Taxa de conversão maior (com processo e cadência).\n Rotina de gestão que sustenta o crescimento sem heróis.\n Indicadores claros para tomada de decisão e priorização.\nICP primário (recomendado para começar)\n Negócio com ticket médio de médio a alto e venda consultiva.\n Time comercial (ao menos 1 closer) ou fundador vendendo com rotina.\n Oferta validada, mas crescimento travado por falta de previsibilidade.\n Dor dominante: pipeline inconsistente, baixa conversão e gestão sem indicadores.\nICP secundário (expansão)\n Empresas que já investem em marketing, mas têm vazamento no comercial.\n Empresas em fase de crescimento acelerado, com processos e gestão frágeis.\nAnti-ICP (clareza que protege a marca)\n Quem quer apenas \"posts\" ou ações isoladas sem processo.\n Quem não tem disposição para executar rotina (rituais, acompanhamento, métricas)."
+  },
+  "oferta_escada_de_valor": [
+    {
+      "nivel": "Entrada",
+      "nome": "Diagnóstico Firevon 360",
+      "duracao": "7-14 dias",
+      "entregaveis": [
+        "Mapa do funil, gargalos, baseline de métricas, prioridades 80/20 e plano 90 dias."
+      ],
+      "objetivo": "Gerar clareza rápida e decisão (reunião -> proposta).",
+      "trecho_original": "Entrada Diagnóstico 7-14 dias Mapa do funil, gargalos, Gerar clareza Firevon 360 baseline de métricas, rápida e decisão prioridades 80/20 e plano 90 (reunião -> dias. proposta)."
+    },
+    {
+      "nivel": "Principal",
+      "nome": "Motor de Receita Firevon",
+      "duracao": "6-10 semanas",
+      "entregaveis": [
+        "ICP e mensagem, canal primário, CRM/pipeline, scripts e cadência, SLA MKT-Vendas, tracking, dashboard e rituais."
+      ],
+      "objetivo": "Colocar o sistema para rodar e aumentar previsibilidade.",
+      "trecho_original": "Principal Motor de Receita 6-10 ICP e mensagem, canal Colocar o sistema Firevon semanas primário, CRM/pipeline, scripts para rodar e e cadência, SLA MKT-Vendas, aumentar tracking, dashboard e rituais. previsibilidade."
+    },
+    {
+      "nivel": "Recorrente",
+      "nome": "Acompanhamento de Performance",
+      "duracao": "3-6 meses",
+      "entregaveis": [
+        "War-room semanal, otimização contínua, treinamento, QBR mensal e governança."
+      ],
+      "objetivo": "Sustentar resultados, melhorar conversão e escalar com controle.",
+      "trecho_original": "Recorrent Acompanhamento 3-6 War-room semanal, Sustentar e de Performance meses otimização contínua, resultados, treinamento, QBR mensal e melhorar governança. conversão e escalar com controle."
+    }
+  ],
+  "metodo_framework": {
+    "nomes_sugeridos": [
+      "Firevon OS",
+      "Motor Firevon",
+      "Sistema Firevon de Performance"
+    ],
+    "etapas": [
+      {
+        "ordem": 1,
+        "nome": "Direcionar",
+        "descricao": "ICP, oferta, mensagem, metas e indicadores.",
+        "trecho_original": "1. Direcionar - ICP, oferta, mensagem, metas e indicadores."
+      },
+      {
+        "ordem": 2,
+        "nome": "Atrair",
+        "descricao": "canal primário, campanhas/rotinas, conteúdo e listas.",
+        "trecho_original": "2. Atrair - canal primário, campanhas/rotinas, conteúdo e listas."
+      },
+      {
+        "ordem": 3,
+        "nome": "Converter",
+        "descricao": "pipeline, scripts, cadência, qualificação e proposta.",
+        "trecho_original": "3. Converter - pipeline, scripts, cadência, qualificação e proposta."
+      },
+      {
+        "ordem": 4,
+        "nome": "Operar",
+        "descricao": "rituais de gestão, dashboard, accountability e execução.",
+        "trecho_original": "4. Operar - rituais de gestão, dashboard, accountability e execução."
+      },
+      {
+        "ordem": 5,
+        "nome": "Escalar",
+        "descricao": "otimização, automação, parcerias e replicação do processo.",
+        "trecho_original": "5. Escalar - otimização, automação, parcerias e replicação do processo."
+      }
+    ],
+    "trecho_original": "Opções de nome\n Firevon OS\n Motor Firevon\n Sistema Firevon de Performance\nEtapas do método (simples, memorável e vendável)\n1. Direcionar - ICP, oferta, mensagem, metas e indicadores.\n2. Atrair - canal primário, campanhas/rotinas, conteúdo e listas.\n3. Converter - pipeline, scripts, cadência, qualificação e proposta.\n4. Operar - rituais de gestão, dashboard, accountability e execução.\n5. Escalar - otimização, automação, parcerias e replicação do processo."
+  },
+  "pilares": [
+    {
+      "pilar": "Marketing - Demanda previsível",
+      "objetivo": "gerar oportunidades qualificadas com consistência.",
+      "entregas_tipicas": [
+        "ICP/segmentos + oferta de entrada + copy base.",
+        "Plano do canal primário (inbound, outbound, tráfego pago ou parcerias) para 30-60 dias.",
+        "Ativos: landing pages, páginas de método/serviços, iscas e CTA.",
+        "Instrumentação mínima: tracking e atribuição básica."
+      ],
+      "kpis_sugeridos": [
+        "Reuniões qualificadas por semana/mês.",
+        "Conversão visita -> lead e lead -> reunião.",
+        "Custo por reunião (quando houver investimento)."
+      ],
+      "trecho_original": "1) Marketing - Demanda previsível\nObjetivo: gerar oportunidades qualificadas com consistência.\nEntregas típicas:\n ICP/segmentos + oferta de entrada + copy base.\n Plano do canal primário (inbound, outbound, tráfego pago ou parcerias) para 30-60 dias.\n Ativos: landing pages, páginas de método/serviços, iscas e CTA.\n Instrumentação mínima: tracking e atribuição básica.\nKPIs sugeridos:\n Reuniões qualificadas por semana/mês.\n Conversão visita -> lead e lead -> reunião.\n Custo por reunião (quando houver investimento)."
+    },
+    {
+      "pilar": "Comercial - Conversão e receita",
+      "objetivo": "transformar oportunidades em faturamento com processo.",
+      "entregas_tipicas": [
+        "CRM e pipeline com critérios de passagem e motivos de perda padronizados.",
+        "Script de diagnóstico (discovery), pitch e condução de próxima etapa.",
+        "Cadência de follow-up + templates e rotina de prospecção.",
+        "Proposta modular (pacotes) e respostas para objeções."
+      ],
+      "kpis_sugeridos": [
+        "Show rate (reuniões que acontecem).",
+        "Call -> proposta e proposta -> fechamento (win rate).",
+        "Ticket médio e ciclo de vendas (dias)."
+      ],
+      "trecho_original": "2) Comercial - Conversão e receita\nObjetivo: transformar oportunidades em faturamento com processo.\nEntregas típicas:\n CRM e pipeline com critérios de passagem e motivos de perda padronizados.\n Script de diagnóstico (discovery), pitch e condução de próxima etapa.\n Cadência de follow-up + templates e rotina de prospecção.\n Proposta modular (pacotes) e respostas para objeções.\nKPIs sugeridos:\n Show rate (reuniões que acontecem).\n Call -> proposta e proposta -> fechamento (win rate).\n Ticket médio e ciclo de vendas (dias)."
+    },
+    {
+      "pilar": "Gestão - Performance sustentada",
+      "objetivo": "fazer o sistema rodar sem depender de esforço heroico e manter evolução contínua.",
+      "entregas_tipicas": [
+        "Dashboard mínimo (10-15 KPIs) e definição de métricas.",
+        "Rituais: weekly growth, pipeline review e QBR mensal.",
+        "OKRs trimestrais e responsáveis (accountability).",
+        "Onboarding e plano de 30 dias por cliente (quick wins)."
+      ],
+      "kpis_sugeridos": [
+        "Aderência aos rituais (% semanas executadas).",
+        "Tempo para primeiro ganho (days to value).",
+        "NPS/satisfação, churn e margem por cliente."
+      ],
+      "trecho_original": "3) Gestão - Performance sustentada\nObjetivo: fazer o sistema rodar sem depender de esforço heroico e manter evolução contínua.\nEntregas típicas:\n Dashboard mínimo (10-15 KPIs) e definição de métricas.\n Rituais: weekly growth, pipeline review e QBR mensal.\n OKRs trimestrais e responsáveis (accountability)."
+    }
+  ],
+  "mensagens_e_slogans": {
+    "mensagens_chave": [
+      "Previsibilidade não é sorte - é sistema.",
+      "Estratégia sem execução é ruído. A gente instala o motor.",
+      "Marketing, Vendas e Gestão no mesmo ritmo."
+    ],
+    "slogans": [
+      "Firevon - Previsibilidade em execução.",
+      "Firevon - Onde estratégia vira rotina e resultado.",
+      "Firevon - Sistema de performance para crescer com controle.",
+      "Firevon - Menos achismo. Mais resultado."
+    ],
+    "trecho_original": "Mensagens-chave (recomendadas)\n Previsibilidade não é sorte - é sistema.\n Estratégia sem execução é ruído. A gente instala o motor.\n Marketing, Vendas e Gestão no mesmo ritmo.\nSlogans (escolha 1 e use consistentemente)\n6. Firevon - Previsibilidade em execução.\n7. Firevon - Onde estratégia vira rotina e resultado.\n8. Firevon - Sistema de performance para crescer com controle.\n9. Firevon - Menos achismo. Mais resultado."
+  },
+  "plano_12_semanas": [
+    {
+      "fase": "Fase 1 (Semanas 1-2) Fundação",
+      "periodo": "Semanas 1-2",
+      "objetivo": "Clareza total de ICP, oferta e método.",
+      "acoes_principais": [
+        "Definir ICP/anti-ICP e segmentos prioritários.",
+        "Definir escada de valor (3 ofertas) e posicionamento.",
+        "Nomear e escrever o framework (1 página).",
+        "Definir metas 90 dias (mesmo que provisórias)."
+      ],
+      "entregaveis": [
+        "ICP/anti-ICP documentado.",
+        "Escada de valor fechada.",
+        "Framework + narrativa base.",
+        "Metas e indicadores definidos."
+      ],
+      "indicadores": [
+        {
+          "kpi": "ICP e ofertas aprovadas; framework pronto.",
+          "dono": "CEO/Estratégia.",
+          "trecho_original": "KPI: ICP e ofertas aprovadas; framework pronto. Dono: CEO/Estratégia."
+        }
+      ],
+      "trecho_original": "Fase 1 (Semanas 1-2) Fundação Clareza total de ICP, oferta e método. Definir ICP/anti-ICP e segmentos prioritários. Definir escada de valor (3 ofertas) e posicionamento. Nomear e escrever o framework (1 página). Definir metas 90 dias (mesmo que provisórias). ICP/anti-ICP documentado. Escada de valor fechada. Framework + narrativa base. Metas e indicadores definidos. KPI: ICP e ofertas aprovadas; framework pronto. Dono: CEO/Estratégia."
+    },
+    {
+      "fase": "Fase 2 (Semanas 3-4) Ativos",
+      "periodo": "Semanas 3-4",
+      "objetivo": "Material de venda + presença mínima de autoridade.",
+      "acoes_principais": [
+        "Criar landing do Diagnóstico 360 com CTA único.",
+        "Criar deck (10-12 slides) e one-page.",
+        "Estruturar CRM, pipeline, cadência e scripts.",
+        "Padronizar proposta (pacotes) e objeções."
+      ],
+      "entregaveis": [
+        "Landing + formulário + agenda.",
+        "Deck + one-page + proposta.",
+        "CRM com pipeline e templates.",
+        "Kit de objeções e follow-up."
+      ],
+      "indicadores": [
+        {
+          "kpi": "visita->lead; lead->reunião; show rate.",
+          "dono": "Growth + Comercial.",
+          "trecho_original": "KPI: visita->lead; lead->reunião; show rate. Dono: Growth + Comercial."
+        }
+      ],
+      "trecho_original": "Fase 2 (Semanas 3-4) Ativos Material de venda + presença mínima de autoridade. Criar landing do Diagnóstico 360 com CTA único. Criar deck (10-12 slides) e one-page. Estruturar CRM, pipeline, cadência e scripts. Padronizar proposta (pacotes) e objeções. Landing + formulário + agenda. Deck + one-page + proposta. CRM com pipeline e templates. Kit de objeções e follow-up. KPI: visita->lead; lead->reunião; show rate. Dono: Growth + Comercial."
+    },
+    {
+      "fase": "Fase 3 (Semanas 5-8) Aquisição e conversão",
+      "periodo": "Semanas 5-8",
+      "objetivo": "Gerar reuniões e validar mensagem na vida real.",
+      "acoes_principais": [
+        "Executar 1 canal primário por 60 dias (sem dispersão).",
+        "Ajustar copy e objeções com base em calls.",
+        "Criar 2 provas (mini-cases/pilotos).",
+        "Implementar SLA Marketing-Comercial."
+      ],
+      "entregaveis": [
+        "Rotina semanal do canal primário.",
+        "Relatório quinzenal de aprendizados.",
+        "2 mini-cases (antes/depois) + depoimentos.",
+        "SLA MKT-Vendas e critérios MQL/SQL."
+      ],
+      "indicadores": [
+        {
+          "kpi": "reuniões/semana; reply rate; win rate.",
+          "dono": "Growth + Comercial + COO.",
+          "trecho_original": "KPI: reuniões/semana; reply rate; win rate. Dono: Growth + Comercial + COO."
+        }
+      ],
+      "trecho_original": "Fase 3 (Semanas 5-8) Aquisição e conversão Gerar reuniões e validar mensagem na vida real. Executar 1 canal primário por 60 dias (sem dispersão). Ajustar copy e objeções com base em calls. Criar 2 provas (mini-cases/pilotos). Implementar SLA Marketing-Comercial. Rotina semanal do canal primário. Relatório quinzenal de aprendizados. 2 mini-cases (antes/depois) + depoimentos. SLA MKT-Vendas e critérios MQL/SQL. KPI: reuniões/semana; reply rate; win rate. Dono: Growth + Comercial + COO."
+    },
+    {
+      "fase": "Fase 4 (Semanas 9-12) Governança e escala",
+      "periodo": "Semanas 9-12",
+      "objetivo": "Previsibilidade + padronização + retenção.",
+      "acoes_principais": [
+        "Implementar dashboard mínimo (interno e cliente).",
+        "Fixar rituais (weekly growth + pipeline review).",
+        "Onboarding padrão do cliente com quick win em 14 dias.",
+        "Rodar QBR mensal e captura de cases."
+      ],
+      "entregaveis": [
+        "Dashboard com 10-15 KPIs.",
+        "Rituais em calendário.",
+        "Onboarding e playbook de entrega.",
+        "1-2 cases completos e publicáveis."
+      ],
+      "indicadores": [
+        {
+          "kpi": "aderência à rotina; NPS; churn; margem.",
+          "dono": "COO/Entrega.",
+          "trecho_original": "KPI: aderência à rotina; NPS; churn; margem. Dono: COO/Entrega."
+        }
+      ],
+      "trecho_original": "Fase 4 (Semanas 9-12) Governança e escala Previsibilidade + padronização + retenção. Implementar dashboard mínimo (interno e cliente). Fixar rituais (weekly growth + pipeline review). Onboarding padrão do cliente com quick win em 14 dias. Rodar QBR mensal e captura de cases. Dashboard com 10-15 KPIs. Rituais em calendário. Onboarding e playbook de entrega. 1-2 cases completos e publicáveis. KPI: aderência à rotina; NPS; churn; margem. Dono: COO/Entrega."
+    }
+  ],
+  "indicadores_de_sucesso": {
+    "leading": [
+      "Reuniões qualificadas por semana/mês.",
+      "Show rate (reuniões realizadas / reuniões agendadas).",
+      "Call -> proposta e proposta -> fechamento (win rate).",
+      "Tempo de resposta a leads.",
+      "Execução de rituais (% semanas com war-room e review)."
+    ],
+    "lagging": [
+      "Receita (MRR ou projetos fechados).",
+      "Margem por cliente/projeto.",
+      "Churn/renovação e expansão.",
+      "NPS/satisfação.",
+      "Previsibilidade de pipeline (forecast)."
+    ],
+    "trecho_original": "Leading indicators (antecipam resultado)\n Reuniões qualificadas por semana/mês.\n Show rate (reuniões realizadas / reuniões agendadas).\n Call -> proposta e proposta -> fechamento (win rate).\n Tempo de resposta a leads.\n Execução de rituais (% semanas com war-room e review).\nLagging indicators (resultado final)\n Receita (MRR ou projetos fechados).\n Margem por cliente/projeto.\n Churn/renovação e expansão.\n NPS/satisfação.\n Previsibilidade de pipeline (forecast)."
+  },
+  "proximos_passos_72h": [
+    {
+      "item": "Escolher 1-2 segmentos prioritários (onde a Firevon quer ganhar o jogo primeiro).",
+      "trecho_original": "10. Escolher 1-2 segmentos prioritários (onde a Firevon quer ganhar o jogo primeiro)."
+    },
+    {
+      "item": "Fechar a escada de valor (Entrada, Principal, Recorrente) e faixa de preço.",
+      "trecho_original": "11. Fechar a escada de valor (Entrada, Principal, Recorrente) e faixa de preço."
+    },
+    {
+      "item": "Escrever o framework em 1 página (etapas + entregáveis + prazos).",
+      "trecho_original": "12. Escrever o framework em 1 página (etapas + entregáveis + prazos)."
+    },
+    {
+      "item": "Montar a landing do Diagnóstico 360 com CTA único e agenda.",
+      "trecho_original": "13. Montar a landing do Diagnóstico 360 com CTA único e agenda."
+    },
+    {
+      "item": "Configurar CRM com pipeline e critérios de passagem; criar templates de follow-up.",
+      "trecho_original": "14. Configurar CRM com pipeline e critérios de passagem; criar templates de follow-up."
+    },
+    {
+      "item": "Produzir 5 conteúdos de autoridade puxando para o Diagnóstico.",
+      "trecho_original": "15. Produzir 5 conteúdos de autoridade puxando para o Diagnóstico."
+    },
+    {
+      "item": "Executar o primeiro ciclo de aquisição (7 dias) e registrar aprendizados.",
+      "trecho_original": "16. Executar o primeiro ciclo de aquisição (7 dias) e registrar aprendizados."
+    }
+  ],
+  "lacunas_e_duvidas": [
+    {
+        "pergunta": "Qual é a faixa de preço para cada nível da escada de valor (Diagnóstico, Motor de Receita, Acompanhamento)?",
+        "por_que_importa": "Sem uma definição de preço, a oferta não pode ser validada no mercado e o potencial de receita não pode ser estimado.",
+        "base_no_texto": "O documento menciona \"faixa de preço\" nos próximos passos, mas não a define."
+    },
+    {
+        "pergunta": "Quem são os responsáveis (RACI) para as ações dos sprints no plano aprimorado?",
+        "por_que_importa": "A falta de donos claros para as tarefas pode levar a atrasos e falta de accountability.",
+        "base_no_texto": "O documento original atribui donos a nível de fase, mas o plano de sprints requer uma atribuição mais granular."
+    },
+    {
+        "pergunta": "Quais são as metas numéricas específicas para os KPIs (leading e lagging)?",
+        "por_que_importa": "Metas numéricas são essenciais para medir o progresso e o sucesso do plano de ação.",
+        "base_no_texto": "O documento sugere KPIs, mas não estabelece metas quantitativas (ex: gerar 10 reuniões qualificadas por semana)."
+    }
+  ]
+}

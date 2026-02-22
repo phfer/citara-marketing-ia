@@ -1,0 +1,10 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&amp;display=swap');
+      .text { font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 700; font-size: 48px; letter-spacing: 8px; }
+    </style>
+  </defs>
+  <text x="200" y="70" text-anchor="middle" fill="#1A1F36" class="text">FIREVON</text>
+  <rect x="50" y="85" width="300" height="4" rx="2" fill="#FF6B35"/>
+</svg>

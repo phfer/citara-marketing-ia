@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIREVON Logo Variations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1A1F36;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .logo-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 280px;
+        }
+
+        .logo-label {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+        }
+
+        .logo-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Variation 1: Wordmark Minimal */
+        .wordmark-minimal {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            letter-spacing: 8px;
+            color: #1A1F36;
+            position: relative;
+        }
+
+        .wordmark-minimal::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #FF6B35;
+            border-radius: 2px;
+        }
+
+        /* Variation 2: Camel Case */
+        .camel-case {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 56px;
+        }
+
+        .camel-case .fire {
+            font-weight: 700;
+            color: #FF6B35;
+        }
+
+        .camel-case .von {
+            font-weight: 400;
+            color: #1A1F36;
+        }
+
+        /* Variation 3: Monogram */
+        .monogram {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+
+        .monogram svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Variation 4: Lowcase */
+        .lowcase {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 500;
+            font-size: 52px;
+            letter-spacing: 12px;
+            color: #00D4C7;
+        }
+
+        /* Variation 5: Two Words */
+        .two-words {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 42px;
+            letter-spacing: 6px;
+            color: #1A1F36;
+        }
+
+        .two-words .dot {
+            color: #FF6B35;
+        }
+
+        /* Variation 6: Abstract */
+        .abstract-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .abstract-symbol {
+            width: 80px;
+            height: 80px;
+        }
+
+        .abstract-text {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 4px;
+            color: #1A1F36;
+        }
+
+        /* Color variations section */
+        .color-section {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-top: 40px;
+        }
+
+        .color-section h2 {
+            color: #1A1F36;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .color-card {
+            text-align: center;
+        }
+
+        .color-swatch {
+            width: 100%;
+            height: 100px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .color-name {
+            font-weight: 600;
+            color: #1A1F36;
+            margin-bottom: 5px;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        /* Dark background versions */
+        .dark-section {
+            background: #1A1F36;
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 30px;
+        }
+
+        .dark-section h2 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.3rem;
+        }
+
+        .dark-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .dark-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .wordmark-minimal-light {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 6px;
+            color: white;
+            position: relative;
+        }
+
+        .wordmark-minimal-light::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #FF6B35;
+            border-radius: 2px;
+        }
+
+        .lowcase-light {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 500;
+            font-size: 36px;
+            letter-spacing: 8px;
+            color: #00D4C7;
+        }
+
+        .two-words-light {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            letter-spacing: 4px;
+            color: white;
+        }
+
+        .two-words-light .dot {
+            color: #FF6B35;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FIREVON</h1>
+        <p class="subtitle">Brand Identity — Logo Variations</p>
+
+        <div class="logo-grid">
+            <!-- 1. Wordmark Minimal -->
+            <div class="logo-card">
+                <div class="wordmark-minimal">FIREVON</div>
+                <p class="logo-label">01. Wordmark Minimal</p>
+            </div>
+
+            <!-- 2. Camel Case -->
+            <div class="logo-card">
+                <div class="camel-case">
+                    <span class="fire">Fire</span><span class="von">Von</span>
+                </div>
+                <p class="logo-label">02. Camel Case</p>
+            </div>
+
+            <!-- 3. Monogram FV -->
+            <div class="logo-card">
+                <div class="monogram">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background shape -->
+                        <rect x="10" y="10" width="100" height="100" rx="20" fill="#1A1F36"/>
+                        <!-- F shape -->
+                        <path d="M30 35 L30 85 L55 85 L55 75 L42 75 L42 65 L55 65 L55 55 L42 55 L42 45 L55 45 L55 35 Z" fill="#FF6B35"/>
+                        <!-- V shape -->
+                        <path d="M90 35 L75 85 L65 85 L50 35 L60 35 L70 70 L80 35 Z" fill="#00D4C7"/>
+                    </svg>
+                </div>
+                <p class="logo-label">03. Monogram FV</p>
+            </div>
+
+            <!-- 4. Lowcase -->
+            <div class="logo-card">
+                <div class="lowcase">firevon</div>
+                <p class="logo-label">04. Lowcase</p>
+            </div>
+
+            <!-- 5. Two Words -->
+            <div class="logo-card">
+                <div class="two-words">FIRE<span class="dot"> · </span>VON</div>
+                <p class="logo-label">05. Two Words</p>
+            </div>
+
+            <!-- 6. Abstract -->
+            <div class="logo-card">
+                <div class="abstract-logo">
+                    <div class="abstract-symbol">
+                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Dynamic abstract F/V fusion -->
+                            <defs>
+                                <linearGradient id="fireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B35"/>
+                                    <stop offset="100%" style="stop-color:#1A1F36"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Main F shape forming V negative space -->
+                            <path d="M10 10 L40 10 L40 35 L25 35 L25 45 L40 45 L40 55 L25 55 L25 70 L10 70 Z" fill="#FF6B35"/>
+                            <!-- V accent -->
+                            <path d="M45 10 L70 10 L57.5 40 Z" fill="#00D4C7"/>
+                            <path d="M70 70 L45 70 L57.5 40 Z" fill="#1A1F36"/>
+                            <!-- Teal accent line -->
+                            <rect x="50" y="75" width="20" height="4" rx="2" fill="#00D4C7"/>
+                        </svg>
+                    </div>
+                    <div class="abstract-text">FIREVON</div>
+                </div>
+                <p class="logo-label">06. Abstract Symbol</p>
+            </div>
+        </div>
+
+        <!-- Color Palette -->
+        <div class="color-section">
+            <h2>Brand Colors</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FF6B35;"></div>
+                    <p class="color-name">Fire Orange</p>
+                    <p class="color-hex">#FF6B35</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1A1F36;"></div>
+                    <p class="color-name">Deep Navy</p>
+                    <p class="color-hex">#1A1F36</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #00D4C7;"></div>
+                    <p class="color-name">Electric Teal</p>
+                    <p class="color-hex">#00D4C7</p>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #718096;"></div>
+                    <p class="color-name">Stone Gray</p>
+                    <p class="color-hex">#718096</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark Background Versions -->
+        <div class="dark-section">
+            <h2>Dark Mode Variations</h2>
+            <div class="dark-grid">
+                <div class="dark-card">
+                    <div class="wordmark-minimal-light">FIREVON</div>
+                </div>
+                <div class="dark-card">
+                    <div class="lowcase-light">firevon</div>
+                </div>
+                <div class="dark-card">
+                    <div class="two-words-light">FIRE<span class="dot"> · </span>VON</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

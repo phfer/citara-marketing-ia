@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tulum Residence - Apresentação Executiva</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Cores Oficiais Tulum Residence */
+            --auxiliar-1: #001432;
+            --auxiliar-2: #0096FA;
+            --auxiliar-3: #C8D2DC;
+            --auxiliar-4: #FFFFFF;
+            --text-dark: #001432;
+            --text-light: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--auxiliar-4);
+            color: var(--text-dark);
+            overflow: hidden;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide-content {
+            max-width: 1400px;
+            width: 100%;
+        }
+
+        /* Slide 1 - Capa */
+        .slide-cover {
+            background: var(--auxiliar-1);
+            color: var(--text-light);
+        }
+
+        .cover-content {
+            text-align: center;
+        }
+
+        .cover-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 72px;
+            font-weight: 700;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+            color: var(--auxiliar-2);
+            text-transform: uppercase;
+        }
+
+        .cover-subtitle {
+            font-size: 28px;
+            font-weight: 300;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            color: var(--auxiliar-3);
+        }
+
+        .cover-tagline {
+            font-size: 22px;
+            font-weight: 400;
+            max-width: 700px;
+            margin: 0 auto 80px;
+            line-height: 1.6;
+        }
+
+        .cover-divider {
+            width: 100px;
+            height: 3px;
+            background: var(--auxiliar-2);
+            margin: 0 auto 40px;
+        }
+
+        /* Slide Styles */
+        .slide-standard {
+            background: var(--auxiliar-4);
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .slide-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px;
+            color: var(--auxiliar-2);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .slide-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: var(--auxiliar-1);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .slide-subtitle {
+            font-size: 18px;
+            color: var(--auxiliar-3);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 4px;
+            padding: 40px;
+            box-shadow: 0 2px 20px rgba(0, 20, 50, 0.08);
+            border: 1px solid rgba(0, 150, 250, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 30px rgba(0, 150, 250, 0.15);
+            border-color: var(--auxiliar-2);
+        }
+
+        .card-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--auxiliar-1);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #4A5568;
+        }
+
+        /* Stats */
+        .stat {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--auxiliar-2);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--auxiliar-3);
+            font-weight: 600;
+        }
+
+        /* List */
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 20, 50, 0.08);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-bullet {
+            width: 6px;
+            height: 6px;
+            background: var(--auxiliar-2);
+            border-radius: 0;
+            margin-top: 10px;
+            flex-shrink: 0;
+        }
+
+        /* Navigation */
+        .nav-container {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 0;
+            background: var(--auxiliar-1);
+            border: 2px solid var(--auxiliar-2);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+
+        .nav-btn:hover {
+            background: var(--auxiliar-2);
+            border-color: var(--auxiliar-1);
+        }
+
+        .nav-dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 0;
+            background: var(--auxiliar-3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: var(--auxiliar-1);
+            transform: scale(1.5);
+        }
+
+        .nav-dot:hover {
+            background: var(--auxiliar-2);
+        }
+
+        /* Persona Cards */
+        .persona-card {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 25px rgba(0, 20, 50, 0.1);
+            border: 1px solid rgba(0, 150, 250, 0.1);
+        }
+
+        .persona-header {
+            background: var(--auxiliar-1);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .persona-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .persona-role {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--auxiliar-2);
+            font-weight: 600;
+        }
+
+        .persona-body {
+            padding: 25px;
+        }
+
+        .persona-insight {
+            background: rgba(0, 150, 250, 0.05);
+            padding: 15px;
+            border-left: 3px solid var(--auxiliar-2);
+            margin-top: 15px;
+            font-size: 13px;
+            font-style: italic;
+            color: var(--auxiliar-1);
+        }
+
+        /* Funnel */
+        .funnel-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .funnel-layer {
+            display: flex;
+            align-items: center;
+            padding: 18px 40px;
+            border-radius: 0;
+            font-weight: 600;
+            color: white;
+            width: 100%;
+            max-width: 800px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .funnel-1 { background: var(--auxiliar-1); width: 100%; }
+        .funnel-2 { background: #002B5C; width: 85%; }
+        .funnel-3 { background: #004785; width: 70%; }
+        .funnel-4 { background: var(--auxiliar-2); width: 55%; }
+
+        /* Color Palette */
+        .palette-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .color-swatch {
+            aspect-ratio: 1;
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 20px;
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .color-swatch.light {
+            color: var(--auxiliar-1);
+        }
+
+        .color-hex {
+            font-family: 'Space Grotesk', monospace;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* Creative Examples */
+        .creative-mockup {
+            background: white;
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 2px 25px rgba(0, 20, 50, 0.1);
+            border: 1px solid rgba(0, 150, 250, 0.1);
+        }
+
+        .creative-tag {
+            display: inline-block;
+            background: var(--auxiliar-2);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Table */
+        .projection-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px rgba(0, 20, 50, 0.08);
+            border: 1px solid rgba(0, 150, 250, 0.1);
+        }
+
+        .projection-table th {
+            background: var(--auxiliar-1);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .projection-table td {
+            padding: 18px 20px;
+            border-bottom: 1px solid rgba(0, 20, 50, 0.05);
+            font-size: 14px;
+        }
+
+        .projection-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .projection-table tr:hover td {
+            background: rgba(0, 150, 250, 0.03);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--auxiliar-2);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--auxiliar-1);
+            border: 3px solid var(--auxiliar-2);
+            border-radius: 0;
+        }
+
+        .timeline-week {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--auxiliar-2);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--auxiliar-1);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .timeline-desc {
+            font-size: 15px;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-box {
+            background: var(--auxiliar-1);
+            border-radius: 0;
+            padding: 60px;
+            text-align: center;
+            color: white;
+            border: 2px solid var(--auxiliar-2);
+        }
+
+        .cta-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cta-text {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .cta-items {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .cta-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contact Slide */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 50px;
+            border-radius: 0;
+            box-shadow: 0 2px 25px rgba(0, 20, 50, 0.1);
+            border: 2px solid var(--auxiliar-2);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 20, 50, 0.08);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 150, 250, 0.1);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--auxiliar-3);
+            margin-bottom: 3px;
+            font-weight: 600;
+        }
+
+        .contact-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--auxiliar-1);
+        }
+
+        /* Dark slide variant */
+        .slide-dark {
+            background: var(--auxiliar-1);
+            color: white;
+        }
+
+        .slide-dark .slide-title {
+            color: white;
+        }
+
+        .slide-dark .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            color: white;
+            border-color: rgba(0, 150, 250, 0.3);
+        }
+
+        .slide-dark .card-title {
+            color: var(--auxiliar-2);
+        }
+
+        .slide-dark .card-text {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .highlight-box {
+            background: rgba(0, 150, 250, 0.15);
+            border-left: 4px solid var(--auxiliar-2);
+            padding: 20px 25px;
+            border-radius: 0;
+            margin: 20px 0;
+        }
+
+        .differentiator-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--auxiliar-2);
+            color: white;
+            padding: 18px 30px;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 16px;
+            margin: 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Badge styles */
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            background: rgba(0, 150, 250, 0.1);
+            color: var(--auxiliar-2);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Platform badges */
+        .platform-badge {
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        .fb-badge { background: #1877F2; }
+        .ig-badge { background: #E4405F; }
+        .tt-badge { background: #000; }
+
+        /* New feature card styles */
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-left: 4px solid var(--auxiliar-2);
+            box-shadow: 0 2px 15px rgba(0, 20, 50, 0.08);
+        }
+
+        .feature-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--auxiliar-1);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Slide 1: Capa -->
+        <div class="slide slide-cover active" data-slide="1">
+            <div class="slide-content cover-content">
+                <div class="cover-logo">TULUM RESIDENCE</div>
+                <div class="cover-subtitle">ESTRATÉGIA DIGITAL</div>
+                <div class="cover-divider"></div>
+                <p class="cover-tagline">O primeiro condomínio com praia privativa de Ribeirão Preto.<br>Uma experiência de vida única.</p>
+                <div style="margin-top: 60px;">
+                    <span style="font-size: 12px; letter-spacing: 4px; opacity: 0.6; text-transform: uppercase;">Use as setas ← → para navegar</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Visão do Mercado -->
+        <div class="slide slide-standard" data-slide="2">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">02</div>
+                    <h2 class="slide-title">Visão de Mercado</h2>
+                    <p class="slide-subtitle">Oportunidade em Ribeirão Preto e Franca</p>
+                </div>
+                <div class="grid-3">
+                    <div class="stat">
+                        <div class="stat-number">720K</div>
+                        <div class="stat-label">População RP</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">R$ 108K</div>
+                        <div class="stat-label">Renda Média Alta</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">+12%</div>
+                        <div class="stat-label">Crescimento Imobiliário</div>
+                    </div>
+                </div>
+                <div class="grid-2" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3 class="card-title">Perfil do Consumidor</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Busca qualidade de vida e contato com a natureza</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Valoriza exclusividade e privacidade</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Disposto a investir em experiências únicas</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Trabalha remoto ou é empresário local</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Insights de Mercado</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Escassez de produtos com lazer completo</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Demandas reprimidas por condomínios resort</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Interesse crescente por "staycation"</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Franca como mercado complementar</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Análise Competitiva -->
+        <div class="slide slide-standard" data-slide="3">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">03</div>
+                    <h2 class="slide-title">Análise Competitiva</h2>
+                    <p class="slide-subtitle">Posicionamento no mercado</p>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <div class="card">
+                            <h3 class="card-title">Cenário Atual</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Concorrentes diretos:</strong> 4 grandes empreendimentos</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Ponto fraco:</strong> Não têm praia privativa</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Comoditização:</strong> Produtos similares</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Comunicação:</strong> Focada em preço/condições</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card" style="background: var(--auxiliar-1); color: white; border-color: var(--auxiliar-2);">
+                            <h3 class="card-title" style="color: var(--auxiliar-2);">Nosso Diferencial</h3>
+                            <p style="margin-bottom: 20px; line-height: 1.7;">O Tulum Residence não é mais um condomínio. É uma experiência de vida que ninguém na região oferece.</p>
+                            <div class="highlight-box">
+                                <strong style="color: var(--auxiliar-2);">PRAIA PRIVATIVA</strong><br>
+                                <span style="font-size: 14px; opacity: 0.9;">O game changer que nos torna únicos</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Diferenciais Únicos -->
+        <div class="slide slide-dark" data-slide="4">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">04</div>
+                    <h2 class="slide-title">Diferenciais Únicos</h2>
+                    <p class="slide-subtitle">Por que o Tulum Residence é inigualável</p>
+                </div>
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <div class="differentiator-badge">
+                        <span style="font-size: 24px;">🏖️</span>
+                        PRAIA PRIVATIVA — 100% EXCLUSIVA
+                    </div>
+                    <p style="margin-top: 20px; font-size: 16px; opacity: 0.8;">Ninguém em Ribeirão Preto ou região tem isso.</p>
+                </div>
+                <div class="grid-4">
+                    <div class="card">
+                        <div class="card-icon">🌿</div>
+                        <h3 class="card-title">Conceito Natureza</h3>
+                        <p class="card-text">Design biomimético que integra com o ambiente natural</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏊</div>
+                        <h3 class="card-title">Resort Completo</h3>
+                        <p class="card-text">5 piscinas, quadras, academia e espaços de convivência</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🔒</div>
+                        <h3 class="card-title">Segurança Total</h3>
+                        <p class="card-text">Portaria 24h e controle de acesso biométrico</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📍</div>
+                        <h3 class="card-title">Localização Privilegiada</h3>
+                        <p class="card-text">Acesso fácil e proximidade com centros urbanos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: As 3 Personas -->
+        <div class="slide slide-standard" data-slide="5">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">05</div>
+                    <h2 class="slide-title">Nossas Personas</h2>
+                    <p class="slide-subtitle">Público-alvo definido com precisão</p>
+                </div>
+                <div class="grid-3">
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-name">Família Upgrade</div>
+                            <div class="persona-role">Casal 35-50 anos</div>
+                        </div>
+                        <div class="persona-body">
+                            <p class="card-text">Casal com filhos pequenos que busca dar um upgrade na qualidade de vida. Tem renda consolidada e valoriza o momento em família.</p>
+                            <div class="persona-insight">
+                                "Quero meus filhos crescendo em contato com a natureza, não em apartamento."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-name">O Investidor</div>
+                            <div class="persona-role">Profissional Liberal 35-55</div>
+                        </div>
+                        <div class="persona-body">
+                            <p class="card-text">Médicos, advogados, empresários que veem o imóvel como investimento + lazer pessoal. Busca rentabilidade e uso próprio.</p>
+                            <div class="persona-insight">
+                                "Quero um ativo que valorize e que eu possa usar nos fins de semana."
+                            </div>
+                        </div>
+                    </div>
+                    <div class="persona-card">
+                        <div class="persona-header">
+                            <div class="persona-name">Família Multiperfil</div>
+                            <div class="persona-role">Família Extensa</div>
+                        </div>
+                        <div class="persona-body">
+                            <p class="card-text">Casais que vivem com sogros ou querem espaço para receber amigos e família frequentemente. Precisa de versatilidade.</p>
+                            <div class="persona-insight">
+                                "Preciso de um espaço que acomode todo mundo, sem deixar de lado o meu conforto."
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Estratégia de Tráfego -->
+        <div class="slide slide-standard" data-slide="6">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">06</div>
+                    <h2 class="slide-title">Estratégia de Tráfego</h2>
+                    <p class="slide-subtitle">Funil de 4 camadas para máxima conversão</p>
+                </div>
+                <div class="grid-2">
+                    <div class="funnel-container">
+                        <div class="funnel-layer funnel-1">
+                            <span>CAMADA 1: Topo de Funil — 1.2M+ pessoas</span>
+                        </div>
+                        <div class="funnel-layer funnel-2">
+                            <span>CAMADA 2: Meio — Interesses 180K pessoas</span>
+                        </div>
+                        <div class="funnel-layer funnel-3">
+                            <span>CAMADA 3: Fundo — Lookalike 45K pessoas</span>
+                        </div>
+                        <div class="funnel-layer funnel-4">
+                            <span>CAMADA 4: Retargeting — Visitantes Site</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card">
+                            <h3 class="card-title">Estrutura das Campanhas</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>4 conjuntos</strong> de anúncios por campanha</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Segmentação</strong> por renda e localização</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Lookalike</strong> de base qualificada</span>
+                                </li>
+                                <li>
+                                    <div class="feature-bullet"></div>
+                                    <span><strong>Retargeting</strong> dinâmico</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card" style="margin-top: 20px;">
+                            <h3 class="card-title">Plataformas</h3>
+                            <div style="display: flex; gap: 12px; margin-top: 15px; flex-wrap: wrap;">
+                                <span class="platform-badge fb-badge">Facebook</span>
+                                <span class="platform-badge ig-badge">Instagram</span>
+                                <span class="platform-badge tt-badge">TikTok</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Conceito Visual -->
+        <div class="slide slide-dark" data-slide="7">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">07</div>
+                    <h2 class="slide-title">Identidade Visual</h2>
+                    <p class="slide-subtitle">Cores e tipografia oficiais da marca</p>
+                </div>
+                <div class="palette-grid">
+                    <div class="color-swatch" style="background: var(--auxiliar-1);">
+                        <span>Auxiliar 1</span>
+                        <span class="color-hex">#001432</span>
+                    </div>
+                    <div class="color-swatch" style="background: var(--auxiliar-2);">
+                        <span>Auxiliar 2</span>
+                        <span class="color-hex">#0096FA</span>
+                    </div>
+                    <div class="color-swatch" style="background: var(--auxiliar-3);" class="light">
+                        <span>Auxiliar 3</span>
+                        <span class="color-hex">#C8D2DC</span>
+                    </div>
+                    <div class="color-swatch light" style="background: var(--auxiliar-4); border: 2px solid var(--auxiliar-3);">
+                        <span>Auxiliar 4</span>
+                        <span class="color-hex">#FFFFFF</span>
+                    </div>
+                </div>
+                <div class="grid-2" style="margin-top: 50px;">
+                    <div class="card">
+                        <h3 class="card-title">Tipografia Principal</h3>
+                        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700; color: var(--auxiliar-1); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">Alfabet</p>
+                        <p class="card-text">Fonte Adobe Fonts usada em títulos e destaques. Transmite modernidade e profissionalismo.</p>
+                        <span class="badge">Adobe Fonts</span>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">Tipografia Alternativa</h3>
+                        <p style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 600; color: var(--auxiliar-1); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Space Grotesk</p>
+                        <p class="card-text">Fonte Google Fonts alternativa. Limpa, geométrica e altamente legível.</p>
+                        <span class="badge">Google Fonts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Exemplos de Criativos -->
+        <div class="slide slide-standard" data-slide="8">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">08</div>
+                    <h2 class="slide-title">Diretrizes de Criativos</h2>
+                    <p class="slide-subtitle">Especificações para produção de artes</p>
+                </div>
+                <div class="grid-2">
+                    <div class="creative-mockup">
+                        <span class="creative-tag">STORY / REELS</span>
+                        <h3 class="card-title">Formato Vertical (9:16)</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Opening de 3 segundos com impacto visual</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Texto na tela sempre legível</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Call-to-action claro no final</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Música trending + ASMR natural</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="creative-mockup">
+                        <span class="creative-tag">FEED / A+</span>
+                        <h3 class="card-title">Formato Quadrado (1:1)</h3>
+                        <ul class="feature-list">
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Imagem principal de alta resolução</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Headline com até 40 caracteres</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>Logo discreto, elemento auxiliar</span>
+                            </li>
+                            <li>
+                                <div class="feature-bullet"></div>
+                                <span>CTA no botão, não na arte</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" style="margin-top: 30px;">
+                    <h3 class="card-title">Temas de Criativos Prioritários</h3>
+                    <div class="grid-4" style="margin-top: 20px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 32px; margin-bottom: 10px;">🏖️</div>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Praia Privativa</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 32px; margin-bottom: 10px;">👨‍👩‍👧‍👦</div>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Momento Família</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 32px; margin-bottom: 10px;">🌅</div>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Pôr do Sol</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 32px; margin-bottom: 10px;">🏠</div>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Plantas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Projeções Financeiras -->
+        <div class="slide slide-standard" data-slide="9">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">09</div>
+                    <h2 class="slide-title">Projeções Financeiras</h2>
+                    <p class="slide-subtitle">Métricas e KPIs esperados</p>
+                </div>
+                <table class="projection-table">
+                    <thead>
+                        <tr>
+                            <th>Mês</th>
+                            <th>Investimento</th>
+                            <th>Alcance</th>
+                            <th>Leads</th>
+                            <th>Visitas</th>
+                            <th>CPL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Mês 1</strong></td>
+                            <td>R$ 15.000</td>
+                            <td>250.000</td>
+                            <td>120-150</td>
+                            <td>40-60</td>
+                            <td>R$ 100-125</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mês 2</strong></td>
+                            <td>R$ 18.000</td>
+                            <td>350.000</td>
+                            <td>180-220</td>
+                            <td>70-90</td>
+                            <td>R$ 82-100</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mês 3</strong></td>
+                            <td>R$ 20.000</td>
+                            <td>450.000</td>
+                            <td>250-300</td>
+                            <td>100-130</td>
+                            <td>R$ 67-80</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mês 4</strong></td>
+                            <td>R$ 22.000</td>
+                            <td>550.000</td>
+                            <td>320-380</td>
+                            <td>140-180</td>
+                            <td>R$ 58-69</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mês 5</strong></td>
+                            <td>R$ 25.000</td>
+                            <td>700.000</td>
+                            <td>400-480</td>
+                            <td>180-230</td>
+                            <td>R$ 52-63</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mês 6</strong></td>
+                            <td>R$ 25.000</td>
+                            <td>800.000</td>
+                            <td>480-560</td>
+                            <td>230-290</td>
+                            <td>R$ 45-52</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="grid-3" style="margin-top: 30px;">
+                    <div class="stat">
+                        <div class="stat-number">~2K</div>
+                        <div class="stat-label">Leads em 6 meses</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">~950</div>
+                        <div class="stat-label">Visitas Agendadas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">R$ 125K</div>
+                        <div class="stat-label">Investimento Total</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Cronograma Executivo -->
+        <div class="slide slide-standard" data-slide="10">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">10</div>
+                    <h2 class="slide-title">Cronograma Executivo</h2>
+                    <p class="slide-subtitle">Roadmap de implementação</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-week">Semana 1</div>
+                        <div class="timeline-title">Setup Inicial</div>
+                        <div class="timeline-desc">Configuração de pixel, conta de anúncios, domain verification e instalação de API de conversão.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-week">Semana 2</div>
+                        <div class="timeline-title">Produção de Criativos</div>
+                        <div class="timeline-desc">Briefing para designer, produção de 20 artes iniciais e edição de 5 vídeos para Reels.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-week">Semana 3</div>
+                        <div class="timeline-title">Lançamento das Campanhas</div>
+                        <div class="timeline-desc">Criação das 4 campanhas, configuração de conjuntos e upload dos criativos.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-week">Semana 4</div>
+                        <div class="timeline-title">Otimização Inicial</div>
+                        <div class="timeline-desc">Análise de primeiros dados, ajuste de lances, escala do que funciona e pausa do que não performa.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-week">Semanas 5-24</div>
+                        <div class="timeline-title">Escalada e Otimização Contínua</div>
+                        <div class="timeline-desc">Testes A/B constantes, expansão de segmentações, produção contínua de novos criativos e relatórios quinzenais.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Próximos Passos -->
+        <div class="slide slide-standard" data-slide="11">
+            <div class="slide-content">
+                <div class="slide-header">
+                    <div class="slide-number">11</div>
+                    <h2 class="slide-title">Próximos Passos</h2>
+                    <p class="slide-subtitle">O caminho para começar</p>
+                </div>
+                <div class="cta-box">
+                    <h2 class="cta-title">Pronto para transformar o marketing do Tulum Residence?</h2>
+                    <p class="cta-text">Temos toda a estrutura, estratégia e criativos prontos para iniciar. Precisamos apenas do seu sinal verde.</p>
+                    <div class="cta-items">
+                        <div class="cta-item">
+                            <span style="font-size: 24px;">📋</span>
+                            <span>Briefing Designer pronto</span>
+                        </div>
+                        <div class="cta-item">
+                            <span style="font-size: 24px;">✍️</span>
+                            <span>15 textos de ads aprovados</span>
+                        </div>
+                        <div class="cta-item">
+                            <span style="font-size: 24px;">🎯</span>
+                            <span>Estratégia de tráfego definida</span>
+                        </div>
+                        <div class="cta-item">
+                            <span style="font-size: 24px;">📊</span>
+                            <span>KPIs e métricas estabelecidos</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-3" style="margin-top: 40px;">
+                    <div class="card">
+                        <h3 class="card-title">01. Aprovação</h3>
+                        <p class="card-text">Aprovação da estratégia e materiais apresentados.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">02. Onboarding</h3>
+                        <p class="card-text">Reunião de kick-off, acesso a contas e ativos.</p>
+                    </div>
+                    <div class="card">
+                        <h3 class="card-title">03. Go Live</h3>
+                        <p class="card-text">Início das campanhas em até 15 dias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: Contato -->
+        <div class="slide slide-dark" data-slide="12">
+            <div class="slide-content">
+                <div class="contact-grid">
+                    <div>
+                        <div class="slide-number">12</div>
+                        <h2 class="slide-title" style="font-size: 56px; margin-bottom: 30px;">Vamos Conversar?</h2>
+                        <p style="font-size: 18px; opacity: 0.9; line-height: 1.7; margin-bottom: 40px;">
+                            Estamos prontos para levar o Tulum Residence ao próximo nível. Agende uma reunião e vamos transformar essa estratégia em resultado.
+                        </p>
+                        <div style="display: inline-block; background: var(--auxiliar-2); color: white; padding: 18px 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px;">
+                            Agendar Reunião
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <div class="contact-label">Email</div>
+                                <div class="contact-value">contato@agencia.com.br</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <div class="contact-label">WhatsApp</div>
+                                <div class="contact-value">(16) 99999-9999</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <div class="contact-label">Localização</div>
+                                <div class="contact-value">Ribeirão Preto — SP</div>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <div class="contact-label">Site</div>
+                                <div class="contact-value">www.agencia.com.br</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 60px;">
+                    <div class="cover-logo" style="font-size: 32px; margin-bottom: 0;">TULUM RESIDENCE</div>
+                    <p style="margin-top: 20px; opacity: 0.6; font-size: 12px; text-transform: uppercase; letter-spacing: 2px;">Apresentação Executiva © 2025</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-container">
+        <button class="nav-btn" id="prevBtn">←</button>
+        <div class="nav-dots" id="navDots"></div>
+        <button class="nav-btn" id="nextBtn">→</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const navDotsContainer = document.getElementById('navDots');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentSlide = 0;
+
+        // Create nav dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('nav-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            navDotsContainer.appendChild(dot);
+        });
+
+        const navDots = document.querySelectorAll('.nav-dot');
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            navDots[currentSlide].classList.remove('active');
+
+            currentSlide = index;
+
+            slides[currentSlide].classList.add('active');
+            navDots[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            const next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }
+
+        function prevSlide() {
+            const prev = (currentSlide - 1 + slides.length) % slides.length;
+            goToSlide(prev);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+    </script>
+</body>
+</html>

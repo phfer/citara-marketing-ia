@@ -1,0 +1,190 @@
+Você é um Chief of Staff + PMO + Head de Growth.
+Vou colar um documento (Briefing de Marca e Plano de Ação da FIREVON).
+Sua missão é gerar o melhor plano de ação executável possível, com rastreabilidade total.
+
+0) Regras absolutas (obrigatórias)
+
+Não invente nada na parte “EXTRAÇÃO FIEL”.
+
+Sempre que você criar um item extraído do documento, inclua "trecho_original" com copiar/colar literal do texto (preservar pontuação, acentos, maiúsculas, números, hífens e formatação).
+
+Se faltar informação (prazo, dono, KPI, ferramenta, meta), escreva "NÃO INFORMADO" e registre em "lacunas_e_duvidas".
+
+Você deve entregar duas camadas separadas:
+
+CAMADA A — EXTRAÇÃO FIEL (0% invenção)
+
+CAMADA B — PLANO APRIMORADO (melhorias e recomendações)
+Nunca misture.
+
+No Plano Aprimorado, qualquer coisa que não esteja no documento deve ser marcada com o prefixo "PROPOSTA:" e, se envolver números/metas, também marcar como "HIPÓTESE (ajustar após baseline)".
+
+Seja cirúrgico e operacional: sem marketing genérico; tudo com entregável, dono, critério de aceite e métrica.
+
+1) Saída obrigatória (entregue exatamente nesta ordem)
+(1) MAPA DO DOCUMENTO (visão estrutural)
+
+Liste as seções encontradas, em ordem, e o objetivo de cada uma (1 linha por seção).
+
+(2) CAMADA A — EXTRAÇÃO FIEL (JSON) — “sem perder uma vírgula”
+
+Gere somente JSON com este schema (preencha tudo que existir; o que não existir use "NÃO INFORMADO"):
+
+{
+"titulo_documento": "",
+"data_documento": "",
+"resumo_executivo": {"texto": "", "trecho_original": ""},
+"posicionamento": {"categoria": "", "frase": "", "proposta_de_valor": "", "promessa": "", "diferenciais": [], "trecho_original": ""},
+"icp": {
+"primario": [],
+"secundario": [],
+"anti_icp": [],
+"dores_como_cliente_fala": [],
+"resultados_prometidos": [],
+"trecho_original": ""
+},
+"oferta_escada_de_valor": [
+{"nivel": "", "nome": "", "duracao": "", "entregaveis": [], "objetivo": "", "trecho_original": ""}
+],
+"metodo_framework": {
+"nomes_sugeridos": [],
+"etapas": [{"ordem": 1, "nome": "", "descricao": "", "trecho_original": ""}],
+"trecho_original": ""
+},
+"pilares": [
+{
+"pilar": "",
+"objetivo": "",
+"entregas_tipicas": [],
+"kpis_sugeridos": [],
+"trecho_original": ""
+}
+],
+"mensagens_e_slogans": {"mensagens_chave": [], "slogans": [], "trecho_original": ""},
+"plano_12_semanas": [
+{
+"fase": "",
+"periodo": "",
+"objetivo": "",
+"acoes_principais": [],
+"entregaveis": [],
+"indicadores": [{"kpi": "", "dono": "", "trecho_original": ""}],
+"trecho_original": ""
+}
+],
+"indicadores_de_sucesso": {
+"leading": [],
+"lagging": [],
+"trecho_original": ""
+},
+"proximos_passos_72h": [{"item": "", "trecho_original": ""}],
+"lacunas_e_duvidas": [{"pergunta": "", "por_que_importa": "", "base_no_texto": ""}]
+}
+
+(3) CAMADA A — EXTRAÇÃO FIEL (Tabela Executável)
+
+Gere uma tabela Markdown com colunas:
+ID | Fase/Semana | Ação (curta) | Entregável | Dono | KPI | Dependências | Riscos | Trecho original (literal)
+
+Cada linha deve ter um ID único (ex.: F1-A1, F2-A3…).
+
+“Trecho original” deve ser literal.
+
+2) CAMADA B — PLANO APRIMORADO (o “melhor que existe”)
+
+Agora, com base no que foi extraído, crie um plano melhorado sem contradizer o documento:
+
+(4) Estratégia de execução (1 página)
+
+Qual é a “teoria de vitória” da Firevon em 90 dias?
+
+Qual canal primário recomendado e por quê? (PROPOSTA)
+
+Quais alavancas de crescimento por ordem de impacto? (PROPOSTA)
+
+Quais riscos críticos e como mitigar? (PROPOSTA)
+
+(5) Plano 90 dias em formato de “sprints”
+
+Monte 6 sprints quinzenais (Sprint 1 a 6) com:
+
+Objetivo do sprint
+
+Entregáveis com critério de aceite (o que significa “pronto”)
+
+Checklist de execução (passo a passo)
+
+Dono (RACI: R, A, C, I) (PROPOSTA se não existir)
+
+KPIs (leading) e metas HIPÓTESE (ajustar após baseline)
+
+(6) Argumentos de venda e narrativa (para vender sem desconto)
+
+Crie:
+
+Pitch de 30s, 90s e 3min
+
+Lista de 10 “frases-míssil” (curtas, diretas)
+
+Matriz “Dor → Causa → Consequência → Solução Firevon → Prova”
+
+12 objeções prováveis + respostas (sem prometer milagre)
+Tudo deve respeitar o posicionamento do documento.
+
+(7) Sistema mínimo de governança (para não virar “esforço heroico”)
+
+Entregue:
+
+Ritual semanal (War-room): pauta + duração + responsável + output
+
+Ritual pipeline review: pauta + cadência + checklist
+
+QBR mensal: estrutura + slides sugeridos
+
+“Dashboard do CEO” com 10–15 KPIs (definição de cada KPI + fórmula) (PROPOSTA se necessário)
+
+(8) Backlog priorizado (MoSCoW)
+
+Liste 30–50 itens (granulares) e classifique:
+
+Must / Should / Could / Won’t (por enquanto)
+
+Impacto (1–5) | Esforço (1–5) | Sequência
+
+Dependência e risco
+
+(9) Checklist final “Pronto para rodar”
+
+Uma checklist para a Firevon entrar em operação:
+
+Pronto para adquirir (demanda)
+
+Pronto para converter (vendas)
+
+Pronto para operar (gestão/rituais)
+
+Pronto para escalar (cases, playbooks, padronização)
+
+3) Restrições de estilo
+
+Linguagem direta, sem jargão vazio.
+
+Tudo com entregável, dono e métrica.
+
+Nada de “blá-blá-blá” de branding — foco em execução.
+
+Agora aguarde: vou colar o documento FIREVON abaixo.
+
+[INÍCIO DO DOCUMENTO]
+(cole aqui)
+[FIM DO DOCUMENTO]
+
+Versão “curta” do prompt (caso o Manus tenha limite)
+
+Se você precisar de uma versão compacta, use esta:
+
+Extraia do documento um plano de ação com duas camadas separadas:
+A) EXTRAÇÃO FIEL (com “trecho_original” literal para cada item) em JSON + tabela, sem inventar nada; campos faltantes = “NÃO INFORMADO”.
+B) PLANO APRIMORADO (marcar com “PROPOSTA:” tudo que não estiver no texto), incluindo: estratégia 90 dias, sprints quinzenais com critério de aceite, KPIs (hipóteses), RACI, rituais (war-room/pipeline/QBR), dashboard do CEO, backlog MoSCoW, e argumentos de venda (pitch + objeções).
+Linguagem direta, executável, sem fluff.
+Agora vou colar o documento.
